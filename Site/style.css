@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "yasashii";
+    src: url("./yasashii/yasashii.otf") format("opentype");
+}
+
+*{
+    font-family: "yasashii";
+}
+
+body{
+    margin: 0;
+    background-size: cover;
+}
+
+/* NAV */
+
+
+ul{
+    list-style-type: none;
+    display: flex;
+    margin-left: 0;
+    /* justify-content: space-evenly; */
+}
+
+li{
+    margin: 0px 100px 0px 100px;
+}
+
+.header{
+    display: flex;
+   
+}
+
+.container{
+    display: flex;
+    width: 100%;
+}
+
+.header .container{
+    justify-content: center;
+    top: 20px;
+    position: fixed;
+    align-items: center;
+}
+
+.header .nav{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 26px;
+    background: rgba(241, 204, 204, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(241, 204, 204, 0.36);
+}
+ 
+.header .container .nav .logo img{
+    height: 90px;
+}
+.header .container .nav h1{
+    margin: 0;
+}
+.header .container .nav .loginBot{
+   display: flex;
+   align-items: flex-end;
+   
+}
+
+
+
+.imagem{
+    background-color: whitesmoke;
+    background-size: cover;
+    transition: 3s;
+    background-image: url(public/assets/imgs/Tema.jpg);
+    background-size: cover;
+}
+
+
+
+.painel{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 40px;
+}   
+
+
+
+.imagem:has(#inverno:hover){
+    background-image:url(public/assets/imgs/inverno.png);
+    
+}
+.painel:has(#inverno:hover){
+    animation: transicao 4s;
+}
+
+.imagem:has(#verao:hover){
+    background-image:url(public/assets/imgs/Tema.jpg);
+    
+}
+.painel:has(#verao:hover){
+    animation: transicao 4s;
+}
+
+.cor:hover{
+    color: white;
+    transition: 2s;
+}
+
+.painel h1{
+    width: fit-content;
+    margin: 0;
+    color: black;
+    margin: 0px 0px 15px 15px;
+}
+
+@keyframes transicao {  
+    0%{
+        backdrop-filter:blur(14px) grayscale(100%);
+    }
+    50%{backdrop-filter:blur(0px);}
+    100%{backdrop-filter:grayscale(0%);}
+}
