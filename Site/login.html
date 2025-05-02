@@ -3,19 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
-    <link rel="stylesheet" href="style.css"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="imagem">
-            <div class="painel">
-                <h1 id="outono" class="cor">Outono</h1>
-                <h1 id="verao" class="cor">Verão</h1>
-                <h1 id="primavera" class="cor">Primavera</h1>
-                <h1 id="inverno" class="cor">Inverno</h1>
-            </div>
-    </div>
     <div class="header">
         <div class="container">
             <div class="nav">
@@ -31,10 +22,20 @@
                         <a href="musicas.html">Músicas</a>
                     </li>
                 </ul>
-                <div class="loginBot">
+                <!-- <div class="loginBot">
                     <a href="login.html"><img src="public/assets/imgs/login.svg" alt=""></a>
-                </div>
+                </div> -->
             </div>
+        </div>
+    </div>
+    <div class="login">
+        <div class="container">
+            <h1>Login</h1>
+            <h3>Nome de usuário ou E-mail:</h3>
+            <input type="text" id="ipt_login">
+            <h3>Senha:</h3>
+            <input type="password" id="ipt_pass">
+            <button onclick="login()">Entrar</button>
         </div>
     </div>
 </body>
