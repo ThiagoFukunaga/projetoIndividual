@@ -73,10 +73,12 @@ li{
 
 .imagem{
     background-color: whitesmoke;
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: contain;
+    background-repeat: no-repeat;
     transition: 3s;
-    background-image: url(public/assets/imgs/Tema.jpg);
-    background-size: cover;
+    background-image: url(public/assets/imgs/inicio2.jpg);
+    
 }
 
 
@@ -87,12 +89,13 @@ li{
     display: flex;
     flex-direction: column-reverse;
     font-size: 40px;
+    
 }   
 
 
 
 .imagem:has(#inverno:hover){
-    background-image:url(public/assets/imgs/inverno.png);
+    background-image:url(public/assets/imgs/inverno2.jpg);
     
 }
 .painel:has(#inverno:hover){
@@ -100,10 +103,28 @@ li{
 }
 
 .imagem:has(#verao:hover){
-    background-image:url(public/assets/imgs/Tema.jpg);
+    background-image:url(public/assets/imgs/verao2.jpg);
     
 }
 .painel:has(#verao:hover){
+    animation: transicao 4s;
+}
+
+.imagem:has(#primavera:hover){
+    background-image:url(public/assets/imgs/primavera2.jpg);
+    
+    
+}
+.painel:has(#primavera:hover){
+    animation: transicao 4s;
+}
+
+.imagem:has(#outono:hover){
+    background-image:url(public/assets/imgs/outono3.jpg);
+    
+    
+}
+.painel:has(#outono:hover){
     animation: transicao 4s;
 }
 
