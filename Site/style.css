@@ -3,11 +3,11 @@
     src: url("./yasashii/yasashii.otf") format("opentype");
 }
 
-*{
+* {
     font-family: "yasashii";
 }
 
-body{
+body {
     margin: 0;
     background-size: cover;
 }
@@ -15,37 +15,36 @@ body{
 /* NAV */
 
 
-ul{
+ul {
     list-style-type: none;
     display: flex;
     margin-left: 0;
     /* justify-content: space-evenly; */
 }
 
-li{
+li {
     margin: 0px 100px 0px 100px;
 }
 
-.header{
+.header {
     display: flex;
-   
 }
 
-.container{
+.container {
     display: flex;
     width: 100%;
 }
 
-.header .container{
+.header .container {
     justify-content: center;
     top: 20px;
     position: fixed;
     align-items: center;
 }
 
-.header .nav{
+.header .nav {
     display: flex;
-    width: 70%;
+    width: 1250px;
     align-items: center;
     justify-content: space-around;
     font-size: 26px;
@@ -56,127 +55,139 @@ li{
     -webkit-backdrop-filter: blur(6.3px);
     border: 1px solid rgba(241, 204, 204, 0.36);
 }
- 
-.header .container .nav .logo img{
+
+.header .container .nav .logo img {
     height: 90px;
 }
-.header .container .nav h1{
+
+.header .container .nav h1 {
     margin: 0;
 }
-.header .container .nav .loginBot{
-   display: flex;
-   align-items: flex-end;
-   
+
+.header .container .nav .loginBot {
+    display: flex;
+    align-items: flex-end;
 }
 
+video {
+    object-fit: cover;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
 
-
-.imagem{
+.imagem {
     background-color: whitesmoke;
-    /* background-size: cover; */
-    background-size: contain;
+    background-size: cover;
+    /* background-size: contain; */
     background-repeat: no-repeat;
     transition: 3s;
     background-image: url(public/assets/imgs/inicio2.jpg);
-    
 }
 
 
 
-.painel{
+.painel {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column-reverse;
     font-size: 40px;
-    
-}   
+}
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-.imagem:has(#inverno:hover){
-    background-image:url(public/assets/imgs/inverno2.jpg);
-    
+.imagem:has(#inverno:hover) {
+    background-image: url(public/assets/imgs/inverno2.jpg);
 }
-.painel:has(#inverno:hover){
+
+.painel:has(#inverno:hover) {
     animation: transicao 4s;
 }
 
-.imagem:has(#verao:hover){
-    background-image:url(public/assets/imgs/verao2.jpg);
-    
+.imagem:has(#verao:hover) {
+    background-image: url(public/assets/imgs/verao2.jpg);
 }
-.painel:has(#verao:hover){
+
+.painel:has(#verao:hover) {
     animation: transicao 4s;
 }
 
-.imagem:has(#primavera:hover){
-    background-image:url(public/assets/imgs/primavera2.jpg);
-    
-    
+.imagem:has(#primavera:hover) {
+    background-image: url(public/assets/imgs/primavera2.jpg);
 }
-.painel:has(#primavera:hover){
+
+.painel:has(#primavera:hover) {
     animation: transicao 4s;
 }
 
-.imagem:has(#outono:hover){
-    background-image:url(public/assets/imgs/outono3.jpg);
-    
-    
+.imagem:has(#outono:hover) {
+    background-image: url(public/assets/imgs/outono3.jpg);
 }
-.painel:has(#outono:hover){
+
+.painel:has(#outono:hover) {
     animation: transicao 4s;
 }
 
-.cor:hover{
+.cor:hover {
     color: white;
     transition: 2s;
 }
 
-.painel h1{
+.painel h1 {
     width: fit-content;
     margin: 0;
     color: black;
     margin: 0px 0px 15px 15px;
 }
 
-@keyframes transicao {  
-    0%{
-        backdrop-filter:blur(14px) grayscale(100%);
+@keyframes transicao {
+    0% {
+        backdrop-filter: blur(14px) grayscale(100%);
     }
-    50%{backdrop-filter:blur(0px);}
-    100%{backdrop-filter:grayscale(0%);}
+
+    50% {
+        backdrop-filter: blur(0px);
+    }
+
+    100% {
+        backdrop-filter: grayscale(0%);
+    }
 }
 
 /* login */
-.login{
+.login {
     width: 100%;
     height: 100vh;
     background-color: beige;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.login .container{
+.login .container {
     display: flex;
     width: 600px;
     height: 600px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* gap: 20px; */
+    background: white;
+    z-index: 1;
+    margin-left: 70px;
+    border-radius: 10px;
+    /* gap: 20px;
     background: rgba(255, 255, 255, 0.47);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.8px);
-    -webkit-backdrop-filter: blur(9.8px);
+    -webkit-backdrop-filter: blur(9.8px); */
 }
 
-.login .container input{
+.login .container input {
     width: 500px;
     height: 20px;
     border-radius: 6px;
@@ -185,24 +196,26 @@ a{
     transition: 0.3s;
     border: 1px solid
 }
-.login .container button{
+
+.login .container button {
     width: 510px;
     padding: 10px;
     text-align: center;
     margin-top: 20px;
     font-weight: bolder;
-    font-size: 20px;
-    background-color: #ffff5d;
+    font-size: 24px;
+    background-color: rgb(77, 80, 228);
     border-radius: 6px;
     cursor: pointer;
     transition: 0.3s;
+    color: whitesmoke;
+    border: none;
 }
-.login .container button:hover{
+
+.login .container button:hover {
     scale: 1.05;
 }
-.login .container input:focus{
+
+.login .container input:focus {
     scale: 1.05;
 }
-
-
-
