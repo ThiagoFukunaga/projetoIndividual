@@ -71,6 +71,12 @@ li {
     margin-right: 14px;
 }
 
+/* index */
+
+.painel h1:hover{
+    cursor: pointer;
+}
+
 video {
     object-fit: cover;
     position: fixed;
@@ -329,4 +335,15 @@ a {
 
 .cadastro .container input:focus {
     scale: 1.05;
+}
+
+/* verao pag */
+.paginaVerao .container{
+    height: 100vh;
+    /* background: #ffec40;
+background: linear-gradient(180deg, rgba(255, 236, 64, 1) 5%, rgba(251, 247, 216, 1) 21%, rgba(255, 255, 255, 1) 79%, rgba(255, 236, 64, 1) 98%); */
+background: #ffffff;
+background: linear-gradient(180deg, rgba(255, 255, 255, 1) 79%, rgba(255, 236, 64, 1) 98%);
+/* background: #ffffff;
+background: linear-gradient(0deg, rgba(255, 255, 255, 1) 79%, rgba(255, 236, 64, 1) 98%); */
 }
