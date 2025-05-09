@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 @font-face {
     font-family: "yasashii";
-    src: url("./yasashii/yasashii.otf") format("opentype");
+    src: url("../../../yasashii/yasashii.otf") format("opentype");
 }
 
 * {
@@ -94,7 +96,7 @@ video {
     /* background-size: contain; */
     background-repeat: no-repeat;
     transition: 3s;
-    background-image: url(public/assets/imgs/inicio2.jpg);
+    background-image: url(../imgs/inicio2.jpg);
 }
 
 
@@ -110,10 +112,11 @@ video {
 a {
     text-decoration: none;
     color: black;
+    width: fit-content;
 }
 
 .imagem:has(#inverno:hover) {
-    background-image: url(public/assets/imgs/inverno2.jpg);
+    background-image: url(../imgs/inverno2.jpg);
 }
 
 .painel:has(#inverno:hover) {
@@ -121,7 +124,7 @@ a {
 }
 
 .imagem:has(#verao:hover) {
-    background-image: url(public/assets/imgs/verao2.jpg);
+    background-image: url(../imgs/verao2.jpg);
 }
 
 .painel:has(#verao:hover) {
@@ -129,7 +132,7 @@ a {
 }
 
 .imagem:has(#primavera:hover) {
-    background-image: url(public/assets/imgs/primavera2.jpg);
+    background-image: url(../imgs/primavera2.jpg);
 }
 
 .painel:has(#primavera:hover) {
@@ -137,15 +140,30 @@ a {
 }
 
 .imagem:has(#outono:hover) {
-    background-image: url(public/assets/imgs/outono3.jpg);
+    background-image: url(../imgs/outono3.jpg);
 }
 
 .painel:has(#outono:hover) {
     animation: transicao 2s;
 }
 
-.cor:hover {
-    color: whitesmoke;
+.cor#inverno:hover {
+    color: rgb(26, 97, 179);
+    transition: 2s;
+}
+
+.cor#primavera:hover {
+    color: rgb(136, 0, 247);
+    transition: 2s;
+}
+
+.cor#verao:hover {
+    color: rgb(4, 104, 54);
+    transition: 2s;
+}
+
+.cor#outono:hover {
+    color: rgb(141, 169, 255);
     transition: 2s;
 }
 
@@ -349,6 +367,8 @@ a {
     gap: 100px ;
 }
 
+
+
 .paginaInverno{
     display: flex;
     height: 100vh;
@@ -362,7 +382,7 @@ a {
     display: flex;
     width: 45%;
     height:70%;
-    background-image: url(public/assets/imgs/imgWinterpag3.png);
+    background-image: url(../imgs/imgWinterpag3.png);
     background-size: cover;
     margin-left: 150px;
     border-radius: 20px;
@@ -379,11 +399,14 @@ a {
     align-items: center;
     justify-content: center;
     color:rgb(2, 36, 74) ;
+    font-family: "DM sans";
 }
 .paginaInverno h1{
     margin: 0;
-    font-size: 150px;
+    font-size: 100px;
     margin-bottom: 30px;
+    color:rgb(2, 36, 74) ;
+
 }
 
 .paginaInverno .container2{
@@ -410,8 +433,8 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
   height: 20%;
   border-radius: 10px;
   border: none;
-  background-color:#02244a ;
-  font-size: 40px;
+  background-color:rgb(2, 36, 74) ;
+  font-size: 24px;
   color: white;
   margin-top: 40px;
 }
@@ -429,7 +452,293 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     width: 70%;
     height: 30%;
     margin-bottom: 15px;
-    font-size: 25px;
+    font-size: 20px;
+}
+
+/* primavera pag */
+.row{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 100px ;
+}
+
+.paginaPrimavera{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column
+}
+
+.paginaPrimavera .row .container{
+    display: flex;
+    width: 45%;
+    height:70%;
+    background-image: url(../imgs/primavera2.jpg);
+    background-size: cover;
+    /* margin-left: 150px; */
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgb(136, 0, 247);
+    
+}
+
+.paginaPrimavera  .texto{
+    display: flex;
+    width: 90%;
+    margin-left: 60px;
+    height: 13%;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(136, 0, 247);
+    font-family: "DM sans";
+}
+.paginaPrimavera  .texto h1{
+    color: rgb(65, 3, 116);
+}
+.paginaPrimavera h1{
+    margin: 0;
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+.paginaPrimavera .container2{
+    display: flex;
+    /* border: solid 2px black; */
+    width: 30%;
+    flex-direction: column;
+    height: 70%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 60px;
+    /* From https://css.glass
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3); */
+
+}
+
+.paginaPrimavera .container2 button{
+  width: 40%;
+  height: 20%;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(136, 0, 247) ;
+  font-size: 24px;
+  color: white;
+  margin-top: 40px;
+}
+
+.paginaPrimavera .container2 button:hover{
+    cursor: pointer;
+    scale: 1.05;
+    transition: 0.3s;
+}
+
+.paginaPrimavera .container2 .texto{
+    display: flex;
+    /* border: solid 4px red; */
+    margin: 0;
+    width: 70%;
+    height: 30%;
+    margin-bottom: 15px;
+    font-size: 20px;
+    align-content: flex-end;
+}
+/* outono pag */
+.row{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 100px ;
+}
+
+.paginaVerao{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: flex-start;
+    
+    flex-direction: column
+}
+
+.paginaVerao .row .container{
+    display: flex;
+    width: 45%;
+    height:70%;
+    background-image: url(../imgs/verao2.jpg);
+    background-size: cover;
+    margin-left: 150px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgb(4, 104, 54);
+    
+}
+
+.paginaVerao .texto{
+    display: flex;
+    width: 90%;
+    margin-left: 60px;
+    height: 13%;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    color:rgb(4, 104, 54) ;
+    font-family: "DM sans";
+}
+.paginaVerao .texto h1{
+    color: rgb(10, 73, 41);
+}
+.paginaVerao h1{
+    margin: 0;
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+.paginaVerao .container2{
+    display: flex;
+    /* border: solid 2px black; */
+    width: 30%;
+    flex-direction: column;
+    height: 70%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* From https://css.glass
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3); */
+
+}
+
+.paginaVerao .container2 button{
+  width: 40%;
+  height: 20%;
+  border-radius: 10px;
+  border: none;
+  background-color:rgb(4, 104, 54) ;
+  font-size: 24px;
+  color: white;
+  margin-top: 40px;
+}
+
+.paginaVerao .container2 button:hover{
+    cursor: pointer;
+    scale: 1.05;
+    transition: 0.3s;
+}
+
+.paginaVerao .container2 .texto{
+    display: flex;
+    /* border: solid 4px red; */
+    margin: 0;
+    width: 70%;
+    height: 30%;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* primavera pag */
+.row{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 100px ;
+}
+
+.paginaOutono{
+    display: flex;  
+    height: 100vh;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column
+}
+
+.paginaOutono .row .container{
+    display: flex;
+    width: 45%;
+    height:70%;
+    background-image: url(../imgs/outono4.jpg);
+    background-size: cover;
+    /* margin-left: 150px; */
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgb(43, 61, 109);
+    
+}
+
+.paginaOutono  .texto{
+    display: flex;
+    width: 90%;
+    margin-left: 60px;
+    height: 13%;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(39, 45, 63);
+    font-family: "DM sans";
+}
+.paginaOutono  .texto h1{
+    color:rgb(39, 45, 63);
+}
+.paginaOutono h1{
+    margin: 0;
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+.paginaOutono .container2{
+    display: flex;
+    /* border: solid 2px black; */
+    width: 30%;
+    flex-direction: column;
+    height: 70%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 60px;
+    /* From https://css.glass
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3); */
+
+}
+
+.paginaOutono .container2 button{
+  width: 40%;
+  height: 20%;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(39, 45, 63) ;
+  font-size: 24px;
+  color: white;
+  margin-top: 40px;
+}
+
+.paginaOutono .container2 button:hover{
+    cursor: pointer;
+    scale: 1.05;
+    transition: 0.3s;
+}
+
+.paginaOutono .container2 .texto{
+    display: flex;
+    /* border: solid 4px red; */
+    margin: 0;
+    width: 70%;
+    height: 30%;
+    margin-bottom: 15px;
+    font-size: 20px;
+    align-content: flex-end;
 }
 
 /* musica */
