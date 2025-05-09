@@ -431,3 +431,18 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     margin-bottom: 15px;
     font-size: 25px;
 }
+
+/* musica */
+
+.musicas{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.musicas .spotify{
+    width: 60%;
+    height: 40%;
+    
+}
