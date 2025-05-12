@@ -479,7 +479,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     background-size: cover;
     /* margin-left: 150px; */
     border-radius: 20px;
-    box-shadow: 5px 5px 20px rgb(136, 0, 247);
+    box-shadow: 5px 5px 20px rgb(2, 36, 74);
     
 }
 
@@ -563,7 +563,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     height: 100vh;
     width: 100%;
     align-items: flex-start;
-    
+
     flex-direction: column
 }
 
@@ -575,7 +575,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     background-size: cover;
     margin-left: 150px;
     border-radius: 20px;
-    box-shadow: 5px 5px 20px rgb(4, 104, 54);
+    box-shadow: 5px 5px 20px rgb(2, 36, 74);
     
 }
 
@@ -669,7 +669,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     background-size: cover;
     /* margin-left: 150px; */
     border-radius: 20px;
-    box-shadow: 5px 5px 20px rgb(43, 61, 109);
+    box-shadow: 5px 5px 20px rgb(2, 36, 74);
 }
 
 .paginaOutono  .texto{
@@ -738,6 +738,11 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     margin-bottom: 15px;
     font-size: 20px;
     align-content: flex-end;
+}
+
+.background{
+    /* background-color: #F4DCD6; */
+    background-color: lavender;
 }
 
 /* musica */
