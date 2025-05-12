@@ -430,7 +430,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 
 .paginaInverno .container2 button{
   width: 40%;
-  height: 20%;
+  height: 10%;
   border-radius: 10px;
   border: none;
   background-color:rgb(2, 36, 74) ;
@@ -525,7 +525,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 
 .paginaPrimavera .container2 button{
   width: 40%;
-  height: 20%;
+  height: 10%;
   border-radius: 10px;
   border: none;
   background-color: rgb(136, 0, 247) ;
@@ -620,7 +620,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 
 .paginaVerao .container2 button{
   width: 40%;
-  height: 20%;
+  height: 10%;
   border-radius: 10px;
   border: none;
   background-color:rgb(4, 104, 54) ;
@@ -665,12 +665,11 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     display: flex;
     width: 45%;
     height:70%;
-    background-image: url(../imgs/outono4.jpg);
+    background-image: url(../../assets/imgs/outono.jpg);
     background-size: cover;
     /* margin-left: 150px; */
     border-radius: 20px;
     box-shadow: 5px 5px 20px rgb(43, 61, 109);
-    
 }
 
 .paginaOutono  .texto{
@@ -715,7 +714,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 
 .paginaOutono .container2 button{
   width: 40%;
-  height: 20%;
+  height: 10%;
   border-radius: 10px;
   border: none;
   background-color: rgb(39, 45, 63) ;
@@ -754,4 +753,61 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     width: 60%;
     height: 40%;
     
+}
+
+/* sobre */
+
+.sectionCor{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+    /* justify-content: center; */
+}
+
+
+
+.sectionCor .container{
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    background-size: cover;
+    /* margin-left: 150px; */
+    align-items: center;
+    padding: 40px 0px 0px 0px;
+    
+}
+
+ .tituloEspectro{
+display: flex;
+align-self: center;
+margin-top: 60px;
+}
+
+ .tituloEspectro h1{
+    font-size: 60px;
+    margin: 0px 0px 20px 0px;
+}
+
+ .imagemEspectro{
+    display: flex;
+    width: 70%;
+    height: 300px;
+    background-size: cover; 
+    background-image: url(../../assets/imgs/coresresumo.png);
+    box-shadow: 5px 5px 20px rgb(43, 61, 109);
+    /* border-radius: 20px; */
+}
+.sectionCor .container .texto{
+    width: 40%;
+    display: flex;
+}
+
+.sectionCor .container .texto p {
+    font-family: "DM sans";
+    font-size: 26px;
+
 }
