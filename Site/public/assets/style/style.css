@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "yasashii";
-    src: url("../../../yasashii/yasashii.otf") format("opentype");
+    src: url("./assets/fonts/yasashii/yasashii.otf") format("opentype");
 }
 
 * {
@@ -25,7 +25,6 @@ ul {
     list-style-type: none;
     display: flex;
     margin-left: 0;
-    /* justify-content: space-evenly; */
 }
 
 li {
@@ -93,9 +92,8 @@ video {
 .imagem {
     background-color: whitesmoke;
     background-size: cover;
-    /* background-size: contain; */
     background-repeat: no-repeat;
-    transition: 3s;
+    transition: 2s;
     background-image: url(../imgs/inicio2.jpg);
 }
 
@@ -115,54 +113,42 @@ a {
     width: fit-content;
 }
 
-.imagem:has(#inverno:hover) {
-    background-image: url(../imgs/inverno2.jpg);
-}
 
 .painel:has(#inverno:hover) {
     animation: transicao 2s;
 }
 
-.imagem:has(#verao:hover) {
-    background-image: url(../imgs/verao2.jpg);
-}
+
 
 .painel:has(#verao:hover) {
     animation: transicao 2s;
-}
-
-.imagem:has(#primavera:hover) {
-    background-image: url(../imgs/primavera2.jpg);
 }
 
 .painel:has(#primavera:hover) {
     animation: transicao 2s;
 }
 
-.imagem:has(#outono:hover) {
-    background-image: url(../imgs/outono3.jpg);
-}
 
 .painel:has(#outono:hover) {
     animation: transicao 2s;
 }
 
-.cor#inverno:hover {
+.cor #inverno:hover {
     color: rgb(26, 97, 179);
     transition: 2s;
 }
 
-.cor#primavera:hover {
+.cor #primavera:hover {
     color: rgb(136, 0, 247);
     transition: 2s;
 }
 
-.cor#verao:hover {
+.cor #verao:hover {
     color: rgb(4, 104, 54);
     transition: 2s;
 }
 
-.cor#outono:hover {
+.cor #outono:hover {
     color: rgb(141, 169, 255);
     transition: 2s;
 }
@@ -170,8 +156,8 @@ a {
 .painel h1 {
     width: fit-content;
     margin: 0;
-    color: black;
     margin: 0px 0px 15px 15px;
+    transition: 1s;
 }
 
 @keyframes transicao {
@@ -203,7 +189,6 @@ a {
     width: 20%;
     height: 40%;
     padding: 40px;
-    /* height: 600px; */
     align-items: center;
     align-items: flex-start;
     justify-content: center;
@@ -212,12 +197,6 @@ a {
     z-index: 1;
     margin-left: 70px;
     border-radius: 10px;
-    /* gap: 20px;
-    background: rgba(255, 255, 255, 0.47);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.8px);
-    -webkit-backdrop-filter: blur(9.8px); */
 }
 
 
@@ -233,7 +212,6 @@ a {
 
 .login .container input {
     width: 97%;
-    /* height: 20px; */
     border-radius: 6px;
     outline: none;
     padding: 4px;
@@ -291,7 +269,6 @@ a {
     width: 20%;
     height: 46%;
     padding: 40px;
-    /* height: 600px; */
     align-items: center;
     align-items: flex-start;
     justify-content: center;
@@ -300,12 +277,6 @@ a {
     z-index: 1;
     margin-left: 70px;
     border-radius: 10px;
-    /* gap: 20px;
-    background: rgba(255, 255, 255, 0.47);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.8px);
-    -webkit-backdrop-filter: blur(9.8px); */
 }
 
 
@@ -321,7 +292,6 @@ a {
 
 .cadastro .container input {
     width: 96%;
-    /* height: 20px; */
     border-radius: 6px;
     outline: none;
     padding: 4px;
@@ -411,20 +381,12 @@ a {
 
 .paginaInverno .container2{
     display: flex;
-    /* border: solid 2px black; */
     width: 30%;
     flex-direction: column;
     height: 70%;
     justify-content: center;
     align-content: center;
     align-items: center;
-    /* From https://css.glass
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3); */
 
 }
 
@@ -447,7 +409,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 
 .paginaInverno .container2 .texto{
     display: flex;
-    /* border: solid 4px red; */
     margin: 0;
     width: 70%;
     height: 30%;
@@ -477,7 +438,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     height:70%;
     background-image: url(../imgs/primavera2.jpg);
     background-size: cover;
-    /* margin-left: 150px; */
     border-radius: 20px;
     box-shadow: 5px 5px 20px rgb(2, 36, 74);
     
@@ -505,7 +465,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 
 .paginaPrimavera .container2{
     display: flex;
-    /* border: solid 2px black; */
     width: 30%;
     flex-direction: column;
     height: 70%;
@@ -513,14 +472,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     align-content: center;
     align-items: center;
     margin-left: 60px;
-    /* From https://css.glass
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3); */
-
 }
 
 .paginaPrimavera .container2 button{
@@ -542,7 +493,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 
 .paginaPrimavera .container2 .texto{
     display: flex;
-    /* border: solid 4px red; */
     margin: 0;
     width: 70%;
     height: 30%;
@@ -601,20 +551,12 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 
 .paginaVerao .container2{
     display: flex;
-    /* border: solid 2px black; */
     width: 30%;
     flex-direction: column;
     height: 70%;
     justify-content: center;
     align-content: center;
     align-items: center;
-    /* From https://css.glass
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3); */
 
 }
 
@@ -637,7 +579,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 
 .paginaVerao .container2 .texto{
     display: flex;
-    /* border: solid 4px red; */
     margin: 0;
     width: 70%;
     height: 30%;
@@ -667,7 +608,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     height:70%;
     background-image: url(../../assets/imgs/outono.jpg);
     background-size: cover;
-    /* margin-left: 150px; */
     border-radius: 20px;
     box-shadow: 5px 5px 20px rgb(2, 36, 74);
 }
@@ -694,7 +634,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 
 .paginaOutono .container2{
     display: flex;
-    /* border: solid 2px black; */
     width: 30%;
     flex-direction: column;
     height: 70%;
@@ -702,13 +641,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     align-content: center;
     align-items: center;
     margin-left: 60px;
-    /* From https://css.glass
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3); */
 
 }
 
@@ -731,7 +663,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 
 .paginaOutono .container2 .texto{
     display: flex;
-    /* border: solid 4px red; */
     margin: 0;
     width: 70%;
     height: 30%;
@@ -741,7 +672,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .background{
-    /* background-color: #F4DCD6; */
     background-color: lavender;
 }
 
@@ -769,7 +699,6 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
     flex-direction: column;
     align-items: center;
     background-color: beige;
-    /* justify-content: center; */
 }
 
 
@@ -804,7 +733,6 @@ margin-top: 60px;
     background-size: cover; 
     background-image: url(../../assets/imgs/coresresumo.png);
     box-shadow: 5px 5px 20px rgb(43, 61, 109);
-    /* border-radius: 20px; */
 }
 .sectionCor .container .texto{
     width: 40%;
@@ -814,5 +742,4 @@ margin-top: 60px;
 .sectionCor .container .texto p {
     font-family: "DM sans";
     font-size: 26px;
-
 }

@@ -5,26 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
-    <link rel="stylesheet" href="public/assets/style/style.css">
-    <link rel="icon" href="public/assets/imgs/iconSite.png">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="icon" href="./assets/imgs/iconSite.png">
 </head>
 
 <body>
 
-    <div class="imagem">
+    <div class="imagem" id="bgHeroi">
         <div class="painel">
 
-            <a href="#secOut">
-                <h1 id="outono" class="cor">Outono</h1>
+            <a href="#secOut" class="cor">
+                <h1 onmouseenter="trocarFundo(event)" id="outono" >Outono</h1>
             </a>
-            <a href="#secVer">
-                <h1 id="verao" class="cor">Verão</h1>
+            <a href="#secVer" class="cor">
+                <h1 onmouseenter="trocarFundo(event)" id="verao" >Verão</h1>
             </a>
-            <a href="#secPri">
-                <h1 id="primavera" class="cor">Primavera</h1>
+            <a  href="#secPri" class="cor">
+                <h1 onmouseenter="trocarFundo(event)" id="primavera" >Primavera</h1>
             </a>
-            <a href="#secInv">
-                <h1 id="inverno" class="cor">Inverno</h1>
+            <a href="#secInv" class="cor">
+                <h1 onmouseenter="trocarFundo(event)" id="inverno" >Inverno</h1>
             </a>
         </div>
     </div>
@@ -102,7 +102,7 @@
         <div class="container">
             <div class="nav">
                 <a href="index.html">
-                    <h1 class="logo"><img src="public/assets/imgs/iconSite.png" alt=""></h1>
+                    <h1 class="logo"><img src="./assets/imgs/iconSite.png" alt=""></h1>
                 </a>
                 <ul>
                     <li>
@@ -116,7 +116,7 @@
                     </li>
                 </ul>
                 <div class="loginBot">
-                    <a href="login.html"><img src="public/assets/imgs/login.svg" alt=""></a>
+                    <a href="login.html"><img src="./assets/imgs/login.svg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -124,3 +124,34 @@
 </body>
 
 </html>
+<script>
+    function trocarFundo (event){
+        const id = event.target.id;
+        const textoHeroi = document.querySelectorAll('.cor');
+        console.log(id); 
+        if(id == 'outono'){
+            bgHeroi.style.backgroundImage = `url(./assets/imgs/outono3.jpg)`;
+            for(let i = 0; i < textoHeroi.length; i++){
+                textoHeroi[i].style.color = '#FFF' 
+            }
+        }
+        if(id == 'inverno'){
+            bgHeroi.style.backgroundImage = `url(./assets/imgs/inverno2.jpg)`;
+            for(let i = 0; i < textoHeroi.length; i++){
+                textoHeroi[i].style.color = '#000' 
+            }
+        }
+        if(id == 'verao'){
+            bgHeroi.style.backgroundImage = `url(./assets/imgs/verao2.jpg)`;
+            for(let i = 0; i < textoHeroi.length; i++){
+                textoHeroi[i].style.color = '#FFF' 
+            }
+        }
+        if(id == 'primavera'){
+            bgHeroi.style.backgroundImage = `url(./assets/imgs/primavera2.jpg)`;
+            for(let i = 0; i < textoHeroi.length; i++){
+                textoHeroi[i].style.color = '#FFF' 
+            }
+        }
+    }
+</script>
