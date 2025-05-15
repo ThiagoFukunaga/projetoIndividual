@@ -39,7 +39,7 @@
             <h3>Senha:</h3>
             <input type="password" id="senha_input">
             <a href="cadastro.html"> <h6>Não tem conta? Crie aqui!</h6> </a> 
-            <button onclick="login()">Entrar</button>
+            <button onclick="entrar()">Entrar</button>
         </div>
     </div>
 </body>
@@ -47,7 +47,7 @@
 </html>
 <script>
         function entrar() {
-        aguardar();
+        // aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -81,7 +81,7 @@
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
                     setTimeout(function () {
-                        window.location = projetoIndividual/Site/public/logado.html
+                        window.location = "./public/logado.html"
                     }, 1000); // apenas para exibir o loading
 
                 });
