@@ -951,3 +951,80 @@ a {
     height: 250px;
     background-image: url(../imgs/springCor.png);
 }
+
+
+
+.sectionSobreVer {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+
+}
+
+.sectionSobreVer .container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+    padding: 40px 0px 0px 0px;
+
+}
+
+
+.tituloSobreVer {
+    display: flex;
+    align-self: center;
+    /* margin: 60px 400px 0px 0px; */
+}
+
+.tituloSobreVer h1 {
+    font-size: 70px;
+    margin: 100px 0px 20px 0px;
+}
+
+.sectionSobreVer .container .texto {
+    width: 40%;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.sectionSobreVer .container .texto p {
+    font-family: "DM sans";
+    font-size: 26px;
+}
+
+.sectionSobreVer .container .row{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.imagemSobreVer {
+    display: flex;
+    width: 25%;
+    min-height: 550px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/imgs/verao2.jpg);
+    box-shadow: 5px 5px 20px rgb(43, 61, 109);
+    justify-content: flex-start;
+    /* margin-right: 40px; */
+    position: sticky
+}
+
+.imagemEspectroVer{
+    display: flex;
+    /* border: 2px solid red;    */
+    width: 100%;
+    height: 250px;
+    background-image: url(../imgs/summerCor.png);
+}
