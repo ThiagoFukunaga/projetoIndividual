@@ -14,7 +14,7 @@ body {
     background-size: cover;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -78,7 +78,7 @@ li {
 
 /* index */
 
-.painel h1:hover{
+.painel h1:hover {
     cursor: pointer;
 }
 
@@ -330,37 +330,37 @@ a {
 }
 
 /* inverno pag */
-.row{
+.row {
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 100px ;
+    gap: 100px;
 }
 
 
 
-.paginaInverno{
+.paginaInverno {
     display: flex;
     height: 100vh;
     width: 100%;
     align-items: flex-start;
-    
+
     flex-direction: column
 }
 
-.paginaInverno .row .container{
+.paginaInverno .row .container {
     display: flex;
     width: 45%;
-    height:70%;
+    height: 70%;
     background-image: url(../imgs/imgWinterpag3.png);
     background-size: cover;
     margin-left: 150px;
     border-radius: 20px;
     box-shadow: 5px 5px 20px rgb(2, 36, 74);
-    
+
 }
 
-.paginaInverno .texto{
+.paginaInverno .texto {
     display: flex;
     width: 90%;
     margin-left: 60px;
@@ -368,18 +368,19 @@ a {
     margin-top: 100px;
     align-items: center;
     justify-content: center;
-    color:rgb(2, 36, 74) ;
+    color: rgb(2, 36, 74);
     font-family: "DM sans";
 }
-.paginaInverno h1{
+
+.paginaInverno h1 {
     margin: 0;
     font-size: 100px;
     margin-bottom: 30px;
-    color:rgb(2, 36, 74) ;
+    color: rgb(2, 36, 74);
 
 }
 
-.paginaInverno .container2{
+.paginaInverno .container2 {
     display: flex;
     width: 30%;
     flex-direction: column;
@@ -390,24 +391,24 @@ a {
 
 }
 
-.paginaInverno .container2 button{
-  width: 40%;
-  height: 10%;
-  border-radius: 10px;
-  border: none;
-  background-color:rgb(2, 36, 74) ;
-  font-size: 24px;
-  color: white;
-  margin-top: 40px;
+.paginaInverno .container2 button {
+    width: 40%;
+    height: 10%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(2, 36, 74);
+    font-size: 24px;
+    color: white;
+    margin-top: 40px;
 }
 
-.paginaInverno .container2 button:hover{
+.paginaInverno .container2 button:hover {
     cursor: pointer;
     scale: 1.05;
     transition: 0.3s;
 }
 
-.paginaInverno .container2 .texto{
+.paginaInverno .container2 .texto {
     display: flex;
     margin: 0;
     width: 70%;
@@ -417,14 +418,14 @@ a {
 }
 
 /* primavera pag */
-.row{
+.row {
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 100px ;
+    gap: 100px;
 }
 
-.paginaPrimavera{
+.paginaPrimavera {
     display: flex;
     height: 100vh;
     width: 100%;
@@ -432,18 +433,18 @@ a {
     flex-direction: column
 }
 
-.paginaPrimavera .row .container{
+.paginaPrimavera .row .container {
     display: flex;
     width: 45%;
-    height:70%;
+    height: 70%;
     background-image: url(../imgs/primavera2.jpg);
     background-size: cover;
     border-radius: 20px;
     box-shadow: 5px 5px 20px rgb(2, 36, 74);
-    
+
 }
 
-.paginaPrimavera  .texto{
+.paginaPrimavera .texto {
     display: flex;
     width: 90%;
     margin-left: 60px;
@@ -454,16 +455,18 @@ a {
     color: rgb(136, 0, 247);
     font-family: "DM sans";
 }
-.paginaPrimavera  .texto h1{
+
+.paginaPrimavera .texto h1 {
     color: rgb(65, 3, 116);
 }
-.paginaPrimavera h1{
+
+.paginaPrimavera h1 {
     margin: 0;
     font-size: 100px;
     margin-bottom: 30px;
 }
 
-.paginaPrimavera .container2{
+.paginaPrimavera .container2 {
     display: flex;
     width: 30%;
     flex-direction: column;
@@ -474,24 +477,24 @@ a {
     margin-left: 60px;
 }
 
-.paginaPrimavera .container2 button{
-  width: 40%;
-  height: 10%;
-  border-radius: 10px;
-  border: none;
-  background-color: rgb(136, 0, 247) ;
-  font-size: 24px;
-  color: white;
-  margin-top: 40px;
+.paginaPrimavera .container2 button {
+    width: 40%;
+    height: 10%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(136, 0, 247);
+    font-size: 24px;
+    color: white;
+    margin-top: 40px;
 }
 
-.paginaPrimavera .container2 button:hover{
+.paginaPrimavera .container2 button:hover {
     cursor: pointer;
     scale: 1.05;
     transition: 0.3s;
 }
 
-.paginaPrimavera .container2 .texto{
+.paginaPrimavera .container2 .texto {
     display: flex;
     margin: 0;
     width: 70%;
@@ -500,15 +503,16 @@ a {
     font-size: 20px;
     align-content: flex-end;
 }
+
 /* outono pag */
-.row{
+.row {
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 100px ;
+    gap: 100px;
 }
 
-.paginaVerao{
+.paginaVerao {
     display: flex;
     height: 100vh;
     width: 100%;
@@ -517,19 +521,19 @@ a {
     flex-direction: column
 }
 
-.paginaVerao .row .container{
+.paginaVerao .row .container {
     display: flex;
     width: 45%;
-    height:70%;
+    height: 70%;
     background-image: url(../imgs/verao2.jpg);
     background-size: cover;
     margin-left: 150px;
     border-radius: 20px;
     box-shadow: 5px 5px 20px rgb(2, 36, 74);
-    
+
 }
 
-.paginaVerao .texto{
+.paginaVerao .texto {
     display: flex;
     width: 90%;
     margin-left: 60px;
@@ -537,19 +541,21 @@ a {
     margin-top: 100px;
     align-items: center;
     justify-content: center;
-    color:rgb(4, 104, 54) ;
+    color: rgb(4, 104, 54);
     font-family: "DM sans";
 }
-.paginaVerao .texto h1{
+
+.paginaVerao .texto h1 {
     color: rgb(10, 73, 41);
 }
-.paginaVerao h1{
+
+.paginaVerao h1 {
     margin: 0;
     font-size: 100px;
     margin-bottom: 30px;
 }
 
-.paginaVerao .container2{
+.paginaVerao .container2 {
     display: flex;
     width: 30%;
     flex-direction: column;
@@ -560,24 +566,24 @@ a {
 
 }
 
-.paginaVerao .container2 button{
-  width: 40%;
-  height: 10%;
-  border-radius: 10px;
-  border: none;
-  background-color:rgb(4, 104, 54) ;
-  font-size: 24px;
-  color: white;
-  margin-top: 40px;
+.paginaVerao .container2 button {
+    width: 40%;
+    height: 10%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(4, 104, 54);
+    font-size: 24px;
+    color: white;
+    margin-top: 40px;
 }
 
-.paginaVerao .container2 button:hover{
+.paginaVerao .container2 button:hover {
     cursor: pointer;
     scale: 1.05;
     transition: 0.3s;
 }
 
-.paginaVerao .container2 .texto{
+.paginaVerao .container2 .texto {
     display: flex;
     margin: 0;
     width: 70%;
@@ -587,32 +593,32 @@ a {
 }
 
 /* primavera pag */
-.row{
+.row {
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 100px ;
+    gap: 100px;
 }
 
-.paginaOutono{
-    display: flex;  
+.paginaOutono {
+    display: flex;
     height: 100vh;
     width: 100%;
     align-items: flex-start;
     flex-direction: column
 }
 
-.paginaOutono .row .container{
+.paginaOutono .row .container {
     display: flex;
     width: 45%;
-    height:70%;
+    height: 70%;
     background-image: url(../../assets/imgs/outono.jpg);
     background-size: cover;
     border-radius: 20px;
     box-shadow: 5px 5px 20px rgb(2, 36, 74);
 }
 
-.paginaOutono  .texto{
+.paginaOutono .texto {
     display: flex;
     width: 90%;
     margin-left: 60px;
@@ -623,16 +629,18 @@ a {
     color: rgb(39, 45, 63);
     font-family: "DM sans";
 }
-.paginaOutono  .texto h1{
-    color:rgb(39, 45, 63);
+
+.paginaOutono .texto h1 {
+    color: rgb(39, 45, 63);
 }
-.paginaOutono h1{
+
+.paginaOutono h1 {
     margin: 0;
     font-size: 100px;
     margin-bottom: 30px;
 }
 
-.paginaOutono .container2{
+.paginaOutono .container2 {
     display: flex;
     width: 30%;
     flex-direction: column;
@@ -644,24 +652,24 @@ a {
 
 }
 
-.paginaOutono .container2 button{
-  width: 40%;
-  height: 10%;
-  border-radius: 10px;
-  border: none;
-  background-color: rgb(39, 45, 63) ;
-  font-size: 24px;
-  color: white;
-  margin-top: 40px;
+.paginaOutono .container2 button {
+    width: 40%;
+    height: 10%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(39, 45, 63);
+    font-size: 24px;
+    color: white;
+    margin-top: 40px;
 }
 
-.paginaOutono .container2 button:hover{
+.paginaOutono .container2 button:hover {
     cursor: pointer;
     scale: 1.05;
     transition: 0.3s;
 }
 
-.paginaOutono .container2 .texto{
+.paginaOutono .container2 .texto {
     display: flex;
     margin: 0;
     width: 70%;
@@ -671,28 +679,50 @@ a {
     align-content: flex-end;
 }
 
-.background{
+.background {
     background-color: lavender;
 }
 
 /* musica */
 
-.musicas{
+.musicas {
     display: flex;
     width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
 }
-.musicas .spotify{
+
+.musicas .spotify {
     width: 60%;
     height: 40%;
-    
+
 }
 
 /* sobre */
 
-.sectionCor{
+.sectionSobreMim {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+
+}
+
+.sectionSobreMim .container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+    padding: 40px 0px 0px 0px;
+
+}
+
+.sectionCor {
     display: flex;
     width: 100%;
     min-height: 100vh;
@@ -701,9 +731,29 @@ a {
     background-color: beige;
 }
 
+.tituloSobreMim {
+    display: flex;
+    align-self: center;
+    margin-top: 60px;
+}
+
+.tituloSobreMim h1 {
+    font-size: 60px;
+    margin: 0px 0px 20px 0px;
+}
+
+.sectionSobreMim .container .texto {
+    width: 40%;
+    display: flex;
+}
+
+.sectionSobreMim .container .texto p {
+    font-family: "DM sans";
+    font-size: 26px;
+}
 
 
-.sectionCor .container{
+.sectionCor .container {
     display: flex;
     width: 100%;
     flex: 1;
@@ -712,29 +762,30 @@ a {
     /* margin-left: 150px; */
     align-items: center;
     padding: 40px 0px 0px 0px;
-    
+
 }
 
- .tituloEspectro{
-display: flex;
-align-self: center;
-margin-top: 60px;
+.tituloEspectro {
+    display: flex;
+    align-self: center;
+    margin-top: 60px;
 }
 
- .tituloEspectro h1{
+.tituloEspectro h1 {
     font-size: 60px;
     margin: 0px 0px 20px 0px;
 }
 
- .imagemEspectro{
+.imagemEspectro {
     display: flex;
     width: 70%;
     height: 300px;
-    background-size: cover; 
+    background-size: cover;
     background-image: url(../../assets/imgs/coresresumo.png);
     box-shadow: 5px 5px 20px rgb(43, 61, 109);
 }
-.sectionCor .container .texto{
+
+.sectionCor .container .texto {
     width: 40%;
     display: flex;
 }
@@ -742,4 +793,136 @@ margin-top: 60px;
 .sectionCor .container .texto p {
     font-family: "DM sans";
     font-size: 26px;
+}
+
+
+
+
+.sectionSobreInv {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+
+}
+
+.sectionSobreInv .container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+    padding: 40px 0px 0px 0px;
+
+}
+
+
+.tituloSobreInv {
+    display: flex;
+    align-self: center;
+    /* margin: 60px 400px 0px 0px; */
+}
+
+.tituloSobreInv h1 {
+    font-size: 70px;
+    margin: 0px 0px 20px 0px;
+}
+
+.sectionSobreInv .container .texto {
+    width: 40%;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.sectionSobreInv .container .texto p {
+    font-family: "DM sans";
+    font-size: 26px;
+}
+
+.sectionSobreInv .container .row{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.imagemSobreInv {
+    display: flex;
+    width: 25%;
+    min-height: 580px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/imgs/imgWinterpag2croppado.jpg);
+    box-shadow: 5px 5px 20px rgb(43, 61, 109);
+    justify-content: flex-start;
+    /* margin-right: 40px; */
+    position: sticky
+}
+
+
+.sectionSobrePri {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+
+}
+
+.sectionSobrePri .container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+    padding: 40px 0px 0px 0px;
+
+}
+
+
+.tituloSobrePri {
+    display: flex;
+    align-self: center;
+    /* margin: 60px 400px 0px 0px; */
+}
+
+.tituloSobrePri h1 {
+    font-size: 70px;
+    margin: 60px 0px 20px 0px;
+}
+
+.sectionSobrePri .container .texto {
+    width: 40%;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.sectionSobrePri .container .texto p {
+    font-family: "DM sans";
+    font-size: 26px;
+}
+
+.sectionSobrePri .container .row{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.imagemSobrePri {
+    display: flex;
+    width: 25%;
+    min-height: 580px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/imgs/imgWinterpag2croppado.jpg);
+    box-shadow: 5px 5px 20px rgb(43, 61, 109);
+    justify-content: flex-start;
+    /* margin-right: 40px; */
+    position: sticky
 }
