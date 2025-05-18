@@ -1103,3 +1103,78 @@ a {
     height: 250px;
     background-image: url(../imgs/fallCor.png);
 }
+
+.sectionSobreInv2 {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+
+}
+
+.sectionSobreInv2 .container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+    padding: 40px 0px 0px 0px;
+
+}
+
+
+.tituloSobreInv2 {
+    display: flex;
+    align-self: center;
+    /* margin: 60px 400px 0px 0px; */
+}
+
+.tituloSobreInv2 h1 {
+    font-size: 70px;
+    margin: 100px 0px 20px 0px;
+}
+
+.sectionSobreInv2 .container .texto {
+    width: 40%;
+    display: flex;
+    height: 100%;
+    /* justify-content: flex-end; */
+    flex-direction: column;
+}
+
+.sectionSobreInv2 .container .texto p {
+    font-family: "DM sans";
+    font-size: 26px;
+}
+
+.sectionSobreInv2 .container .row{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+.imagemSobreInv2 {
+    display: flex;
+    width: 25%;
+    min-height: 560px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/imgs/imgWinterpag2croppado.jpg);
+    box-shadow: 5px 5px 20px rgb(43, 61, 109);
+    justify-content: flex-start;
+    /* margin-right: 40px; */
+    position: sticky
+}
+
+.imagemEspectroInv2{
+    display: flex;
+    /* border: 2px solid red;    */
+    width: 100%;
+    height: 250px;
+    background-image: url(../imgs/winterTSCor.png);
+}
