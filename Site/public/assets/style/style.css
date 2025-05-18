@@ -835,7 +835,8 @@ a {
     width: 40%;
     display: flex;
     height: 100%;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
+    flex-direction: column;
 }
 
 .sectionSobreInv .container .texto p {
@@ -847,12 +848,14 @@ a {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
 }
 
 .imagemSobreInv {
     display: flex;
     width: 25%;
-    min-height: 580px;
+    min-height: 560px;
     object-fit: cover;
     background-repeat: no-repeat;
     background-image: url(../../assets/imgs/imgWinterpag2croppado.jpg);
@@ -861,6 +864,17 @@ a {
     /* margin-right: 40px; */
     position: sticky
 }
+
+.imagemEspectroInv{
+    display: flex;
+    /* border: 2px solid red;    */
+    width: 100%;
+    height: 250px;
+    background-image: url(../imgs/winterCor.png);
+}
+
+
+
 
 
 .sectionSobrePri {
@@ -893,7 +907,7 @@ a {
 
 .tituloSobrePri h1 {
     font-size: 70px;
-    margin: 60px 0px 20px 0px;
+    margin: 100px 0px 20px 0px;
 }
 
 .sectionSobrePri .container .texto {
@@ -901,6 +915,7 @@ a {
     display: flex;
     height: 100%;
     justify-content: flex-end;
+    flex-direction: column;
 }
 
 .sectionSobrePri .container .texto p {
@@ -912,17 +927,27 @@ a {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
 }
 
 .imagemSobrePri {
     display: flex;
     width: 25%;
-    min-height: 580px;
+    min-height: 550px;
     object-fit: cover;
     background-repeat: no-repeat;
-    background-image: url(../../assets/imgs/imgWinterpag2croppado.jpg);
+    background-image: url(../../assets/imgs/primavera.jpg);
     box-shadow: 5px 5px 20px rgb(43, 61, 109);
     justify-content: flex-start;
     /* margin-right: 40px; */
     position: sticky
+}
+
+.imagemEspectroPri{
+    display: flex;
+    /* border: 2px solid red;    */
+    width: 100%;
+    height: 250px;
+    background-image: url(../imgs/springCor.png);
 }
