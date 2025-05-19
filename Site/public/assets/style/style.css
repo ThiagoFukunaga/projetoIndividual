@@ -60,6 +60,7 @@ li {
     backdrop-filter: blur(6.3px);
     -webkit-backdrop-filter: blur(6.3px);
     border: 1px solid rgba(241, 204, 204, 0.36);
+    z-index: 1;
 }
 
 .header .container .nav .logo img {
@@ -1168,7 +1169,7 @@ a {
     box-shadow: 5px 5px 20px rgb(43, 61, 109);
     justify-content: flex-start;
     /* margin-right: 40px; */
-    position: sticky
+    position: sticky;
 }
 
 .imagemEspectroInv2{

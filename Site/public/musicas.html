@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Músicas</title>
+    <title>Quiz </title>
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/quiz.css">
     <link rel="icon" href="./assets/imgs/iconSite.png">
     
 </head>
@@ -31,13 +32,22 @@
             </div>
         </div>
     </div>
-    <div class="musicas">
-        <div class="spotify">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3GU8BzFEAdFSRjc8jZkL3S?utm_source=generator"
-             width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-             loading="lazy"></iframe>
+
+    <div class="app">
+        <h1>Quiz</h1>
+        <div class="quiz">
+            <h2 id="questoes">Question goes here</h2>
+            <div id="botao-resposta">
+                <button class="resposta">Answer 1</button>
+                <button class="resposta">Answer 2</button>
+                <button class="resposta">Answer 3</button>
+                <button class="resposta">Answer 4</button>
             </div>
+            <button id="proximo">Next</button>
+        </div>
     </div>
+    <script src="js/quiz.js"></script>
+    
     
 </body>
 </html>
