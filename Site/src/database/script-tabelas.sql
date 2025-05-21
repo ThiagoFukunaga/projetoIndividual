@@ -17,3 +17,9 @@ CREATE TABLE usuario (
 	email VARCHAR(50),
 	senha VARCHAR(50)
 );
+
+create table quiz(
+id int primary key auto_increment,
+fkusuario int,
+acertos int,
+foreign key (fkusuario) references quiz(id));
