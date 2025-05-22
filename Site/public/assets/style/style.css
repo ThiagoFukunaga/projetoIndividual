@@ -33,17 +33,21 @@ li {
 
 .header {
     display: flex;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 20px;
+
 }
 
 .container {
     display: flex;
     width: 100%;
+    
 }
 
 .header .container {
     justify-content: center;
-    top: 20px;
-    position: fixed;
     align-items: center;
 }
 
@@ -60,7 +64,7 @@ li {
     backdrop-filter: blur(6.3px);
     -webkit-backdrop-filter: blur(6.3px);
     border: 1px solid rgba(241, 204, 204, 0.36);
-    z-index: 1;
+    z-index: 100;
 }
 
 .header .container .nav .logo img {
@@ -835,19 +839,22 @@ a {
     justify-content: space-evenly;
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 .imagemSobreInv {
     display: flex;
     width: 25%;
-    min-height: 560px;
     object-fit: cover;
+    height: 70vh;
     background-repeat: no-repeat;
     background-image: url(../../assets/imgs/imgWinterpag2croppado.jpg);
     box-shadow: 5px 5px 20px rgb(43, 61, 109);
     justify-content: flex-start;
     /* margin-right: 40px; */
-    position: sticky
+    position: sticky;
+    top: 82px;
+    z-index: 0;
 }
 
 .imagemEspectroInv{
