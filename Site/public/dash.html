@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body onload="obterDadosGrafico()">
+    
+    <canvas id="graficoQuiz"></canvas>
+</body>
+
+</html>
+<script>
+    function obterDadosGrafico() {
+        fetch(`/dashboard/buscarAcertos/`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fkusuario: sessionStorage.getItem("ID_USUARIO")
+            })
+        }).then(
+            function (resultado) {
+                console.log(resultado)
+                
+                resultado.json().then(
+                    function (json){
+                        let labels = []
+                        let acertos = []
+
+                        console.log(json)
+                        
+                        for(let i = 0; i < json.length; i++){
+                            labels.push(`tentativa: ${i+1}`)
+                            acertos.push(json[i].acertos)
+                        }
+                        const graficoAcerto = document.getElementById("graficoQuiz")
+
+                          new Chart(graficoAcerto, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            data: acertos,
+                            borderColor: '#F9B631',
+                            backgroundColor: '#F9B631',
+                            fill: true,
+                            borderRadius: 5,
+                            color: '#fff',
+                        }
+                    ]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            ticks: {
+                                stepSize: 50,
+                                padding: 10
+                            },
+                            grid: {
+                                display: false
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+                )
+                
+            }
+        ).catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+    }
+</script>
