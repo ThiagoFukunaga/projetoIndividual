@@ -13,7 +13,7 @@ create table quiz(
 id int primary key auto_increment,
 fkusuario int,
 acertos int,
-foreign key (fkusuario) references quiz(id));
+foreign key (fkusuario) references usuario(id));
 
 create table avaliacao(
 id int primary key auto_increment,
