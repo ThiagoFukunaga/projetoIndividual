@@ -80,7 +80,30 @@ function cadastrar(req, res) {
     }
 }
 
+function buscarEstacao (req, res){
+    var estacao = req.body.estacaoServer
+    
+    console.log(req.body)
+
+    dashboardModel.buscandoEstacao(estacao).then(
+        function(resultado){
+            res.json(resultado)
+    }
+).catch(
+    function (erro) {
+        console.log(erro);
+        console.log(
+            "\nHouve um erro ao buscar a estacao favorita! Erro: ",
+            erro.sqlMessage
+        );
+        res.status(500).json(erro.sqlMessage);
+    }
+)
+}
+
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    buscarEstacao
 }
