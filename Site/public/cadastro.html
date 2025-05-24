@@ -49,6 +49,14 @@
             <input type="password" id="senha_input">
             Confirme a senha:
             <input type="password" id="confirmacao_senha_input">
+            Estacao preferida:
+            <select id="select_estacao">
+                <option value="">Selecione</option>
+                <option value="i">Inverno</option>
+                <option value="p">Primavera</option>
+                <option value="v">Verão</option>
+                <option value="o">Outono</option>
+            </select>
             <button onclick="cadastrar()">CADASTRAR</button>
         </div>
     </div>
@@ -62,15 +70,28 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var estacaoSelectVar = select_estacao.value;
+        var estacaoFav  = ""
 
         if (
             nomeVar == "" ||
             emailVar == "" ||
             senhaVar == "" ||
-            confirmacaoSenhaVar == ""
+            confirmacaoSenhaVar == "" ||
+            estacaoSelectVar == "Selecione"
         ) {
             alert
                 ("Preencha todos os campos");
+        }
+
+        if(estacaoSelectVar == "i"){
+            estacaoFav = "Inverno"
+        }else if (estacaoSelectVar == "o"){
+            estacaoFav = "Outono"
+        }else if (estacaoSelectVar == "p"){
+            estacaoFav = "Primavera"
+        }else if (estacaoSelectVar == "v"){
+            estacaoFav = "Verão"
         }
 
 
@@ -86,6 +107,7 @@
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar,
+                estacaoServer: estacaoFav,
             }),
         })
     }

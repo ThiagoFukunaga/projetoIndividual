@@ -116,12 +116,6 @@ a {
     }
 }
 
-
-
-
-/* cadastro */
-
-
 /* inverno pag */
 .row {
     display: flex;
@@ -129,8 +123,6 @@ a {
     height: 100%;
     gap: 100px;
 }
-
-
 
 .paginaInverno {
     display: flex;
