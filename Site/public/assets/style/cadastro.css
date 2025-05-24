@@ -1,0 +1,73 @@
+.cadastro {
+    width: 100%;
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cadastro .container {
+    display: flex;
+    width: 20%;
+    height: 46%;
+    padding: 40px;
+    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background: white;
+    z-index: 1;
+    margin-left: 70px;
+    border-radius: 10px;
+}
+
+
+
+.cadastro .container h1 {
+    margin: 0px 0px 2px 0px
+}
+
+.cadastro .container h3 {
+    margin: 8px 8px 8px 0px;
+    font-size: 16px;
+}
+
+.cadastro .container input {
+    width: 96%;
+    border-radius: 6px;
+    outline: none;
+    padding: 4px;
+    transition: 0.3s;
+    border: 1px solid;
+    margin: 5px 0px 5px 0px;
+}
+
+.cadastro .container button {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: bolder;
+    font-size: 24px;
+    background-color: rgb(77, 80, 228);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: whitesmoke;
+    border: none;
+}
+
+
+
+.cadastro .container a {
+    padding: 0;
+}
+
+.cadastro .container button:hover {
+    scale: 1.05;
+}
+
+.cadastro .container input:focus {
+    scale: 1.05;
+}
