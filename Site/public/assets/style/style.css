@@ -18,68 +18,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* NAV */
 
-
-ul {
-    list-style-type: none;
-    display: flex;
-    margin-left: 0;
-}
-
-li {
-    margin: 0px 100px 0px 100px;
-}
-
-.header {
-    display: flex;
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-    top: 20px;
-
-}
-
-.container {
-    display: flex;
-    width: 100%;
-    
-}
-
-.header .container {
-    justify-content: center;
-    align-items: center;
-}
-
-.header .nav {
-    display: flex;
-    width: 980px;
-    height: 60px;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 16px;
-    background: rgba(241, 204, 204, 0.4);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.3px);
-    -webkit-backdrop-filter: blur(6.3px);
-    border: 1px solid rgba(241, 204, 204, 0.36);
-    z-index: 100;
-}
-
-.header .container .nav .logo img {
-    height: 80px;
-}
-
-.header .container .nav h1 {
-    margin: 0;
-}
-
-.header .container .nav .loginBot {
-    display: flex;
-    align-items: flex-end;
-    margin-right: 14px;
-}
 
 /* index */
 
