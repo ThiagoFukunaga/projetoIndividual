@@ -5,7 +5,7 @@
     src: url("../fonts/yasashii/yasashii.otf") format("opentype");
 }
 
-* {
+body {
     font-family: "yasashii";
 }
 

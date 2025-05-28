@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+
 .cadastro {
     width: 100%;
     height: 100vh;
@@ -5,6 +9,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-family: "DM sans";
 }
 
 .cadastro .container {
@@ -35,9 +40,9 @@
 
 .cadastro .container input {
     width: 96%;
-    border-radius: 6px;
+    border-radius: 4px;
     outline: none;
-    padding: 4px;
+    padding: 5px;
     transition: 0.3s;
     border: 1px solid;
     margin: 5px 0px 5px 0px;
@@ -56,6 +61,7 @@
     transition: 0.3s;
     color: whitesmoke;
     border: none;
+    font-family: "yasashii";
 }
 
 
@@ -70,4 +76,14 @@
 
 .cadastro .container input:focus {
     scale: 1.05;
+}
+
+select{
+    width: 100%;
+    padding: 4px;
+}
+
+#login {
+    margin: 4px 0;
+    color: purple;
 }
