@@ -73,6 +73,8 @@ function comecar() {
     questaoAtualIndex = 0
     ponto = 0
     botaoProximo.innerHTML = "Próxima";
+    document.getElementById ("progress").style.width = "0%"
+        document.getElementById ("grayscale").style.backdropFilter = "grayscale(100%)" + " blur(14px)"
     mostrarQuestao();
 }
 
@@ -86,11 +88,11 @@ function resetState() {
 
 function mostrarQuestao() {
     resetState();
-
+    
     let questaoAtual = questoes[questaoAtualIndex]
-    let questaoNo = questaoAtual + 1
+    let questaoNo = questaoAtualIndex + 1
     questaoElement.innerHTML = questaoNo + ". " + questaoAtual.questao
-
+    
     questaoAtual.resposta.forEach((resposta) => {
         const button = document.createElement("button")
         button.innerHTML = resposta.text
@@ -104,13 +106,14 @@ function mostrarQuestao() {
 function selecionarResposta(e) {
     resposta = questoes[questaoAtualIndex].resposta
     const respostaCorreta = resposta.filter((resposta) => resposta.correto == true)[0]
-
+    
     const selectedBtn = e.target
     const isCorrect = selectedBtn.dataset.id == respostaCorreta.id
-
+    
     if (isCorrect) {
         selectedBtn.classList.add("correto")
         ponto++
+        document.getElementById ("grayscale").style.backdropFilter = "grayscale(" + ( 100 - (ponto / questoes.length)*100) + "%)" + " blur(" + ( 8 - (ponto / questoes.length)*8) + "px)"
     } else {
         selectedBtn.classList.add("incorreto")
     }
@@ -130,10 +133,13 @@ botaoProximo.addEventListener("click", () => {
 
 function handleNextButton() {
     questaoAtualIndex++
+    document.getElementById ("progress").style.width = (questaoAtualIndex / questoes.length)*100 + "%"
+
     if (questaoAtualIndex < questoes.length) {
         mostrarQuestao()
     } else {
         showScore()
+        
     }
 }
 
@@ -161,7 +167,7 @@ function sendData() {
         }
     )
 }
-
-
 comecar();
+
+
 

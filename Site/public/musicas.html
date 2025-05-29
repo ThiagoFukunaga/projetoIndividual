@@ -6,54 +6,36 @@
     <title>Quiz </title>
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="./assets/style/quiz.css">
-    <link rel="stylesheet" href="./assets/style/nav.css">
     <link rel="icon" href="./assets/imgs/iconSite.png">
     
 </head>
 <body>
 
-    <section class="header">
-        <div class="container">
-            <div class="nav">
-                <a href="index.html">
-                    <h1 class="logo"><img src="./assets/imgs/iconSite.png" alt=""></h1>
-                </a>
-                <ul>
-                    <li>
-                        <a href="index.html">Início</a>
-                    </li>
-                    <li>
-                        <a href="sobre.html">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="cores.html">Cores</a>
-                    </li>
-                </ul>
-                <div class="loginBot">
-                    <a href="login.html"><img src="./assets/imgs/login.svg" alt=""></a>
+
+    <div class="app" >
+        <div class="container" id="grayscale">
+            <div class="quiz">
+                <h1>Quiz: O quanto você sabe sobre La la land?</h1>
+                <h2 id="questoes">Question goes here</h2>
+                <div id="botao-resposta">
+                    <button class="resposta">Answer 1</button>
+                    <button class="resposta">Answer 2</button>
+                    <button class="resposta">Answer 3</button>
+                    <button class="resposta">Answer 4</button>
                 </div>
+                <button id="proximo">Next</button>
             </div>
         </div>
-    </section>
-
-    <div class="app">
-        <h1>Quiz</h1>
-        <div class="quiz">
-            <h2 id="questoes">Question goes here</h2>
-            <div id="botao-resposta">
-                <button class="resposta">Answer 1</button>
-                <button class="resposta">Answer 2</button>
-                <button class="resposta">Answer 3</button>
-                <button class="resposta">Answer 4</button>
-            </div>
-            <button id="proximo">Next</button>
+        <div class="progressBar">
+            <div id="progress"></div>
         </div>
     </div>
-    <script src="js/quiz.js"></script>
+
     
-    
+
 </body>
 </html>
+<script src="js/quiz.js"></script>
 <script>
 
 
