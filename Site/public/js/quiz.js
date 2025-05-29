@@ -169,5 +169,17 @@ function sendData() {
 }
 comecar();
 
+function mudarTema(){
+    const root = document.documentElement;
 
 
+    if(sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno"){
+        root.style.setProperty('--imagemFundo', 'url("../imgs/inverno2.jpg")')
+    } else if(sessionStorage.getItem("ESTACAO_USUARIO") == "Outono"){
+        root.style.setProperty('--imagemFundo', 'url("../imgs/outono3.jpg")')
+    }else if(sessionStorage.getItem("ESTACAO_USUARIO") == "Primavera"){
+        root.style.setProperty('--imagemFundo', 'url("../imgs/primavera2.jpg")')
+    }else if(sessionStorage.getItem("ESTACAO_USUARIO") == "Verão"){
+        root.style.setProperty('--imagemFundo', 'url("../imgs/verao2.jpg")')
+    }
+}

@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz </title>
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/sidebar.css">
     <link rel="stylesheet" href="./assets/style/quiz.css">
     <link rel="icon" href="./assets/imgs/iconSite.png">
     
 </head>
-<body>
+<body onload="mudarTema()">
+<section class="sidebar">
+    <div class="container">
+        <img src="assets/imgs/menu.svg" alt="">
+        <div class="link">
+            
+        </div>
+    </div>
+</section>
 
-
-    <div class="app" >
+    <div class="app" id="fundoImagem" >
         <div class="container" id="grayscale">
             <div class="quiz">
+                
                 <h1>Quiz: O quanto você sabe sobre La la land?</h1>
+                <div class="progressBar">
+                    <div id="progress"></div>
+                </div>
                 <h2 id="questoes">Question goes here</h2>
                 <div id="botao-resposta">
                     <button class="resposta">Answer 1</button>
@@ -23,12 +35,11 @@
                     <button class="resposta">Answer 3</button>
                     <button class="resposta">Answer 4</button>
                 </div>
+                
                 <button id="proximo">Next</button>
             </div>
         </div>
-        <div class="progressBar">
-            <div id="progress"></div>
-        </div>
+        
     </div>
 
     

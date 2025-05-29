@@ -1,0 +1,40 @@
+.sidebar {
+    display: flex;
+    width: 14%;
+    height: 100vh;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1000;
+    flex-direction: column;
+
+}
+
+.sidebar .container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sidebar .container .link {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .container img {
+    width: 80px;
+    opacity: 50%;
+    transition: 0.3s;
+
+}
+
+.sidebar .container img:hover {
+    opacity: 100%;
+
+}
