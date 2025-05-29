@@ -1,13 +1,15 @@
 :root{
     --imagemFundo: url("../imgs/Tema.jpg");
-    --corCorreto: '#9aeabc'
-    --corErrado: '#ff9393'
-    --corProgress: '#1a48f1'
+    --corCorreto: #9aeabc;
+    --corErrado: #e22b2b;
+    --corProgress: #1a48f1;
+    --corTema: #001e4d;
+    
 }
 
 .resposta{
     background: #fff;
-    color: #222;
+    color: #001e4d;
     font-weight: 500;
     width: 100%;
     border: 1px solid #222;
@@ -20,7 +22,7 @@
 }
 
 .resposta:hover:not([disabled]){
-background:#222;
+background:var(--corTema);
 color: #fff;
 }
 
@@ -31,7 +33,7 @@ color: #fff;
 
 
 #proximo{
-    background: #001e4d;
+    background: var(--corTema);
     color: #fff;
     font-weight: 500;
     width: 150px;
