@@ -17,6 +17,18 @@
 </html>
 <script>
     function obterDadosGrafico() {
+        let corDash = null
+
+        if(sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno"){
+        corDash = '#00008B'
+    } else if(sessionStorage.getItem("ESTACAO_USUARIO") == "Outono"){
+        corDash = 'rgb(39, 45, 63)'
+    }else if(sessionStorage.getItem("ESTACAO_USUARIO") == "Primavera"){
+        corDash = '#8F00FF'
+    }else if(sessionStorage.getItem("ESTACAO_USUARIO") == "Verão"){
+        corDash = '#008000'
+    }
+
         fetch(`/dashboard/buscarAcertos/`, {
             method: "POST",
             headers: {
@@ -37,7 +49,7 @@
                         console.log(json)
                         
                         for(let i = 0; i < json.length; i++){
-                            labels.push(`tentativa: ${i+1}`)
+                            labels.push(`Tentativa: ${i+1}`)
                             acertos.push(json[i].acertos)
                         }
                         const graficoAcerto = document.getElementById("graficoQuiz")
@@ -49,8 +61,8 @@
                     datasets: [
                         {
                             data: acertos,
-                            borderColor: '#F9B631',
-                            backgroundColor: '#F9B631',
+                            borderColor: corDash,
+                            backgroundColor: corDash,
                             fill: true,
                             borderRadius: 5,
                             color: '#fff',
