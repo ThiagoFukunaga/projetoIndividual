@@ -1,6 +1,8 @@
 :root{
-    --imagemFundo: url("../imgs/outono2.jpg");
-    
+    --imagemFundo: url("../imgs/Tema.jpg");
+    --corCorreto: '#9aeabc'
+    --corErrado: '#ff9393'
+    --corProgress: '#1a48f1'
 }
 
 .resposta{
@@ -26,9 +28,7 @@ color: #fff;
     cursor: no-drop;
 }
 
-.teste{
-    color: #008000;
-}
+
 
 #proximo{
     background: #001e4d;
@@ -44,10 +44,10 @@ color: #fff;
 }
 
 .correto{
-    background: #9aeabc;
+    background: var(--corCorreto);
 }
 .incorreto{
-    background: #ff9393;
+    background: var(--corErrado);
 }
 
 .app
@@ -95,7 +95,7 @@ padding: 16px;
 #progress{
     width: 0%;
     height: 100%;
-    background-color: #1a48f1;
+    background-color: var(--corProgress);
     border-radius: 6px;
     transition: 0.5s;
 }
