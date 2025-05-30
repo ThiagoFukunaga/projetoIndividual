@@ -7,4 +7,7 @@ router.post("/buscarAcertos", function(req, res){
    dashboardController.buscarAcertos(req, res)
 })
 
+router.get("/buscarAcertosTotal", function(req, res){
+   dashboardController.buscarAcertosTotal(req, res)
+})
 module.exports = router;

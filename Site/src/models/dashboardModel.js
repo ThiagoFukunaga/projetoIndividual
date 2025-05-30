@@ -6,6 +6,11 @@ function buscandoResultado(fkusuario) {
 
 }
 
+function buscarAcertosTotal(){
+    let comandoSQL = `select round(avg(acertos),2) as 'media_acertos' from quiz`
+    return database.executar(comandoSQL)
+}
 module.exports = {
-    buscandoResultado
+    buscandoResultado,
+    buscarAcertosTotal
 };

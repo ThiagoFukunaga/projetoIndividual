@@ -4,7 +4,10 @@
     --corErrado: #e22b2b;
     --corProgress: #1a48f1;
     --corTema: #001e4d;
-    
+}
+
+h2{
+    font-family: 'DM sans';
 }
 
 .resposta{

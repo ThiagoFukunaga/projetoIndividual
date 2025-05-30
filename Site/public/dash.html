@@ -9,11 +9,14 @@
 
 </head>
 
-<body onload="obterDadosGrafico(); obterDadosEstacao()">
-    
+<body onload="obterDadosGrafico(); obterDadosEstacao(); obterDadosMedia()">
+
     <canvas id="graficoQuiz"></canvas>
     <br>
     <canvas id="graficoEstacao"></canvas>
+    <br>
+    <canvas id="graficoQuizMedia"></canvas>
+    
 </body>
 
 </html>
@@ -21,15 +24,15 @@
     function obterDadosGrafico() {
         let corDash = null
 
-        if(sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno"){
-        corDash = '#00008B'
-    } else if(sessionStorage.getItem("ESTACAO_USUARIO") == "Outono"){
-        corDash = 'rgb(39, 45, 63)'
-    }else if(sessionStorage.getItem("ESTACAO_USUARIO") == "Primavera"){
-        corDash = '#8F00FF'
-    }else if(sessionStorage.getItem("ESTACAO_USUARIO") == "Verão"){
-        corDash = '#008000'
-    }
+        if (sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno") {
+            corDash = '#00008B'
+        } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Outono") {
+            corDash = 'rgb(39, 45, 63)'
+        } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Primavera") {
+            corDash = '#8F00FF'
+        } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Verão") {
+            corDash = '#008000'
+        }
 
         fetch(`/dashboard/buscarAcertos/`, {
             method: "POST",
@@ -42,62 +45,62 @@
         }).then(
             function (resultado) {
                 console.log(resultado)
-                
+
                 resultado.json().then(
-                    function (json){
+                    function (json) {
                         let labels = []
                         let acertos = []
 
                         console.log(json)
-                        
-                        for(let i = 0; i < json.length; i++){
-                            labels.push(`Tentativa: ${i+1}`)
+
+                        for (let i = 0; i < json.length; i++) {
+                            labels.push(`Tentativa: ${i + 1}`)
                             acertos.push(json[i].acertos)
                         }
                         const graficoAcerto = document.getElementById("graficoQuiz")
 
-                          new Chart(graficoAcerto, {
-                type: 'bar',
-                data: {
-                    labels: labels,
-                    datasets: [
-                        {
-                            data: acertos,
-                            borderColor: corDash,
-                            backgroundColor: corDash,
-                            fill: true,
-                            borderRadius: 5,
-                            color: '#fff',
-                        }
-                    ]
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scales: {
-                        y: {
-                            ticks: {
-                                stepSize: 50,
-                                padding: 10
+                        new Chart(graficoAcerto, {
+                            type: 'bar',
+                            data: {
+                                labels: labels,
+                                datasets: [
+                                    {
+                                        data: acertos,
+                                        borderColor: corDash,
+                                        backgroundColor: corDash,
+                                        fill: true,
+                                        borderRadius: 5,
+                                        color: '#fff',
+                                    }
+                                ]
                             },
-                            grid: {
-                                display: false
+                            options: {
+                                plugins: {
+                                    legend: {
+                                        display: false
+                                    }
+                                },
+                                scales: {
+                                    y: {
+                                        ticks: {
+                                            stepSize: 50,
+                                            padding: 10
+                                        },
+                                        grid: {
+                                            display: false
+                                        }
+                                    },
+                                    x: {
+                                        grid: {
+                                            display: false
+                                        }
+                                    }
+                                }
                             }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            }
-                        }
+                        });
                     }
-                }
-            });
-        }
                 )
-                
+
             }
         ).catch(function (error) {
             console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
@@ -107,78 +110,181 @@
     ;
 
 
-        function obterDadosEstacao(){
-            let total = 4
+    function obterDadosEstacao() {
+        let total = 4
 
-        fetch(`/usuario/buscarAcertos/`, {
+        let corDash = null
+
+        if (sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno") {
+            corDash = '#00008B'
+        } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Outono") {
+            corDash = 'rgb(39, 45, 63)'
+        } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Primavera") {
+            corDash = '#8F00FF'
+        } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Verão") {
+            corDash = '#008000'
+        }
+
+        fetch(`/usuarios/buscandoEstacao/`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
             },
         }).then(function (resultado) {
-                console.log(resultado)
-                
-                resultado.json().then(
-                    function (json){
-                        let labels = []
-                        let estacao = []
+            console.log(resultado)
 
-                        console.log(json)
-                        
-                        for(let i = 0; i < json.length; i++){
-                            labels.push(json[i].estacao)
-                            estacao.push(json[i].total)
-                        }
-                        const graficoEstacao = document.getElementById("graficoEstacao")
+            resultado.json().then(
+                function (json) {
+                    let labels = []
+                    let estacao = []
 
-                          new Chart(graficoEstacao, {
-                type: 'pie',
-                data: {
-                    labels: labels,
-                    datasets: [
-                        {   weight: 5,
-                            borderRadius: 5,
-                            label: `Estacao`,
-                            data: estacao,
-                            borderColor: corDash,
-                            backgroundColor: corDash,
-                            fill: true,
-                            color: '#fff',
-                            order: 2
-                        }
-                    ]
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scales: {
-                        y: {
-                            ticks: {
-                                stepSize: 50,
-                                padding: 10
-                            },
-                            grid: {
-                                display: false
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            }
-                        }
+                    console.log(json)
+
+                    for (let i = 0; i < json.length; i++) {
+                        labels.push(json[i].estacao)
+                        estacao.push(json[i].total)
+                        console.log()
                     }
+                    const graficoEstacao = document.getElementById("graficoEstacao")
+
+                    new Chart(graficoEstacao, {
+                        type: 'doughnut',
+                        data: {
+                            labels: labels,
+                            datasets: [
+                                {
+                                    weight: 5,
+                                    borderRadius: 5,
+                                    label: `Estacao`,
+                                    data: estacao,
+                                    borderColor: '',
+                                    backgroundColor: [
+                                        '#B3EBF2', // inverno
+                                        '#B39EB5', //primavera
+                                        '#CFCFC4    ', // outono
+                                        '#80EF80' // verao
+                                    ],
+                                    fill: true,
+                                    color: '#fff',
+                                    order: 2
+                                }
+                            ]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    ticks: {
+                                        stepSize: 50,
+                                        padding: 10
+                                    },
+                                    grid: {
+                                        display: false
+                                    }
+                                },
+                                x: {
+                                    grid: {
+                                        display: false
+                                    }
+                                }
+                            }
+                        }
+                    });
                 }
-            });
+            )
+
         }
-                )
-                
-            }
         ).catch(function (error) {
             console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
         });
     }
-    
+
+    function obterDadosMedia() {
+        let corDash = null
+
+        if (sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno") {
+            corDash = '#00008B'
+        } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Outono") {
+            corDash = 'rgb(39, 45, 63)'
+        } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Primavera") {
+            corDash = '#8F00FF'
+        } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Verão") {
+            corDash = '#008000'
+        }
+
+        fetch(`/dashboard/buscarAcertosTotal/`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }).then(
+            function (resultado) {
+                console.log(resultado)
+
+                resultado.json().then(
+                    function (json) {
+                        let labels = []
+                        let media_acertos = []
+
+                        console.log(json)
+
+                        for (let i = 0; i < json.length; i++) {
+                            labels.push(`Tentativa: ${i + 1}`)
+                            media_acertos.push(json[i].media_acertos)
+                        }
+                        const graficoAcertoTotal = document.getElementById("graficoQuizMedia")
+
+                        new Chart(graficoAcertoTotal, {
+                            type: 'bar',
+                            data: {
+                                labels: labels,
+                                datasets: [
+                                    {
+                                        data: media_acertos,
+                                        borderColor: corDash,
+                                        backgroundColor: corDash,
+                                        fill: true,
+                                        borderRadius: 5,
+                                        color: '#fff',
+                                    }
+                                ]
+                            },
+                            options: {
+                                plugins: {
+                                    legend: {
+                                        display: false
+                                    }
+                                },
+                                scales: {
+                                    y: {
+                                        ticks: {
+                                            stepSize: 50,
+                                            padding: 10
+                                        },
+                                        grid: {
+                                            display: false
+                                        }
+                                    },
+                                    x: {
+                                        grid: {
+                                            display: false
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    }
+                )
+
+            }
+        ).catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        })
+    }
+
+
 </script>

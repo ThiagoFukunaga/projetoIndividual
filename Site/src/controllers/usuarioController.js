@@ -85,7 +85,7 @@ function buscarEstacao (req, res){
     
     console.log(req.body)
 
-    dashboardModel.buscandoEstacao(estacao).then(
+    usuarioModel.buscandoEstacao(estacao).then(
         function(resultado){
             res.json(resultado)
     }
