@@ -31,7 +31,7 @@ li {
 .header .nav {
     display: flex;
     font-family: 'yasashii';
-    width: 80%;
+    width: 75%;
     height: 65%;
     align-items: center;
     justify-content: space-around;
