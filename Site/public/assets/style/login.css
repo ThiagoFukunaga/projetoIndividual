@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-*{
-    font-family: "DM sans";
-}
+
 
 .login {
     width: 100%;
@@ -11,6 +9,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-family: "DM sans";
 }
 
 .login .container {
@@ -68,11 +67,11 @@
     font-size: 14px;
     margin: 4px;
     color: purple;
-    text-decoration: underline;
 }
 
 .login .container a {
     padding: 0;
+    align-self: center;
 }
 
 .login .container button:hover {
@@ -81,4 +80,10 @@
 
 .login .container input:focus {
     scale: 1.05;
+}
+
+#textoLogin{
+    align-self: center;
+    font-size: 48px;
+    font-weight: 500;;
 }

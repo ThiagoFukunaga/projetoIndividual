@@ -5,9 +5,7 @@
     src: url("../fonts/yasashii/yasashii.otf") format("opentype");
 }
 
-body {
-    font-family: "yasashii";
-}
+
 
 body {
     margin: 0;
@@ -47,6 +45,11 @@ video {
     display: flex;
     flex-direction: column-reverse;
     font-size: 32px;
+    font-family: 'yasashii';
+}
+h1{
+    font-family: 'yasashii';
+
 }
 
 a {

@@ -40,7 +40,10 @@
     </section>
     <div class="cadastro">
         <div class="container">
-            <h1>Cadastro</h1>
+            <h1 id="textoCadastro">Cadastro</h1>
+            <a href="login.html" id="login">
+                Já tem conta? Entre aqui!
+            </a>
             E-mail:
             <input type="text" id = "email_input">
             Nome de usuário:
@@ -57,9 +60,7 @@
                 <option value="v">Verão</option>
                 <option value="o">Outono</option>
             </select>
-            <a href="login.html" id="login">
-                Já tem conta? Entre aqui!
-            </a>
+            
             <button onclick="cadastrar()">CADASTRAR</button>
             <div id="div_resultadoCadastro"></div>
         </div>
