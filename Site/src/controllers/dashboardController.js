@@ -21,5 +21,5 @@ function buscarAcertos (req, res){
 )
 }
 module.exports = {
-    buscarAcertos
+    buscarAcertos,
 }

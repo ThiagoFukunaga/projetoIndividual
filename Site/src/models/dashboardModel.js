@@ -5,4 +5,7 @@ function buscandoResultado(fkusuario) {
     return database.executar(comandoSQL)
 
 }
-module.exports = { buscandoResultado }
+
+module.exports = {
+    buscandoResultado
+};

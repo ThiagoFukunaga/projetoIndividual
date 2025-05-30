@@ -22,10 +22,9 @@ function cadastrar(nome, email, senha, estacao) {
     return database.executar(instrucaoSql);
 }
 
-function buscandoEstacao(estacao){
-    let comandoSQL = `select estacao from usuario where usuario = ${estacao}`;
-    return database.executar(comandoSQL)
-
+function buscandoEstacao(){
+    let instrucaoSql = `select estacao from usuario`;
+    return database.executar(instrucaoSql)
 }
 
 module.exports = {

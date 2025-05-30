@@ -9,9 +9,11 @@
 
 </head>
 
-<body onload="obterDadosGrafico()">
+<body onload="obterDadosGrafico(); obterDadosEstacao()">
     
     <canvas id="graficoQuiz"></canvas>
+    <br>
+    <canvas id="graficoEstacao"></canvas>
 </body>
 
 </html>
@@ -99,16 +101,84 @@
             }
         ).catch(function (error) {
             console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-        });
+        })
+    }
 
-        fetch(`/usuario/buscarEstacao/`, {
-            method: "POST",
+    ;
+
+
+        function obterDadosEstacao(){
+            let total = 4
+
+        fetch(`/usuario/buscarAcertos/`, {
+            method: "GET",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                fkusuario: sessionStorage.getItem("ID_USUARIO")
-            })
-        }).then
+        }).then(function (resultado) {
+                console.log(resultado)
+                
+                resultado.json().then(
+                    function (json){
+                        let labels = []
+                        let estacao = []
+
+                        console.log(json)
+                        
+                        for(let i = 0; i < json.length; i++){
+                            labels.push(json[i].estacao)
+                            estacao.push(json[i].total)
+                        }
+                        const graficoEstacao = document.getElementById("graficoEstacao")
+
+                          new Chart(graficoEstacao, {
+                type: 'pie',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {   weight: 5,
+                            borderRadius: 5,
+                            label: `Estacao`,
+                            data: estacao,
+                            borderColor: corDash,
+                            backgroundColor: corDash,
+                            fill: true,
+                            color: '#fff',
+                            order: 2
+                        }
+                    ]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            ticks: {
+                                stepSize: 50,
+                                padding: 10
+                            },
+                            grid: {
+                                display: false
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+                )
+                
+            }
+        ).catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
     }
+    
 </script>
