@@ -16,6 +16,7 @@
     <section class="sidebar">
         <img src="assets/imgs/menu.svg" alt="" onclick="showContent()" id="showSide">
         <div class="container" id="sidebarGrow">
+            <img src="assets/imgs/close.svg" alt="" id="closeSide" onclick="showContent()">
             <img src="assets/imgs/iconSite.png" alt="">
             <div class="link">
                 <button class="botaoSide">Início</button>
@@ -59,11 +60,12 @@
 
         if (document.getElementById("sidebarGrow").style.width != '100%') {
 
-            document.getElementById("sidebarGrow").style.width = '100%'
-            
+            document.getElementById("sidebarGrow").style.width = '100%'            
+            document.getElementById("showSide").src = ""
         } else {
 
             document.getElementById("sidebarGrow").style.width = '0%'
+            document.getElementById("showSide").src = 'assets/imgs/menu.svg'
         }
     }
 

@@ -41,6 +41,15 @@
 
 .sidebar #showSide{
     width: 70px;
+    position: absolute;
+    z-index: 1000000;
+}
+.sidebar .container #closeSide{
+    align-self: flex-end;
+    position: absolute;
+    top: 0;
+    width: 70px;
+    cursor: pointer;
 }
 
 .sidebar #showSide:hover{

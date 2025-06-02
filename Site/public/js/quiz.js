@@ -199,7 +199,7 @@ function mudarTema(){
         root.style.setProperty('--corTema', '#341E60');
         root.style.setProperty('--corSide', '#c3b1e674');
         root.style.setProperty('--corSideSec', '#8F6CF0');
-        root.style.setProperty('--corPrincipal', '#7CB342');
+        root.style.setProperty('--corPrincipal', '#C3B1E6');
 
     }else if(sessionStorage.getItem("ESTACAO_USUARIO") == "Verão"){
         root.style.setProperty('--imagemFundo', 'url("../imgs/verao3.jpg")')
