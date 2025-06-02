@@ -4,29 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/style/nav.css">
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/sidebar.css">
+    <link rel="stylesheet" href="./assets/style/quiz.css">
+
 </head>
 <body>
-    <section class="header">
-        <div class="container">
-            <div class="nav">
-                <a href="index.html">
-                    <h1 class="logo"><img src="./assets/imgs/iconSite.png" alt=""></h1>
-                </a>
-                <ul>
-                    <li>
-                        <a href="index.html">Início</a>
-                    </li>
-                    <li>
-                        <a href="sobre.html">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="cores.html">Cores</a>
-                    </li>
-                </ul>
+    <section class="sidebar">
+        <img src="assets/imgs/menu.svg" alt="" onclick="showContent()" id="showSide">
+        <div class="container" id="sidebarGrow">
+            <img src="assets/imgs/close.svg" alt="" id="closeSide" onclick="showContent()">
+            <img src="assets/imgs/iconSite.png" alt="">
+            <div class="link">
+                <button class="botaoSide" onclick="redirecionarInicio()">Início</button>
+                <button class="botaoSide" onclick="redirecionarQuiz()">Quiz</button>
+                <button class="botaoSide" onclick="redirecionarDash()">Dashboards</button>  
             </div>
         </div>
     </section>
+
 </body>
 </html>
+<script src="js/sidebar.js"> </script>
