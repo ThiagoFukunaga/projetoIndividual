@@ -1,7 +1,7 @@
 :root{
     --corSide: #C3B1E6 ;
     --corSideSec:#0000001a;
-    
+    --corPrincipal: #0000001a;
 }
 
 .sidebar {
@@ -39,10 +39,11 @@
 
 }
 
-.sidebar img{
+.sidebar #showSide{
     width: 70px;
 }
-.sidebar img:hover{
+
+.sidebar #showSide:hover{
     cursor: pointer;
 }
 
@@ -61,6 +62,8 @@
     margin-top: 50px;
     font-family: 'yasashii';
     font-size: 24px;
+    background-color: var(--corPrincipal);
+
 }
 
 .sidebar .container {
