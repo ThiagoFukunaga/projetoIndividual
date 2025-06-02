@@ -1,3 +1,9 @@
+:root{
+    --corSide: #C3B1E6 ;
+    --corSideSec:#0000001a;
+    
+}
+
 .sidebar {
     display: flex;
     width: 14%;
@@ -6,35 +12,58 @@
     position: absolute;
     z-index: 1000;
     flex-direction: column;
-
+    transition: 0.3s;
 }
 
 .sidebar .container {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    /* From https://css.glass */
-background: rgba(255, 255, 255, 0.2);
-border-radius: 4px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+    background: var(--corSide);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 30px var(--corSideSec);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid var(--corSide);
+    width: 0%;
+    transition: 0.3s;
+    overflow: hidden;
+    padding: 0;
 }
 
 .sidebar .container .link {
     display: flex;
     flex-direction: column;
+
+
+}
+
+.sidebar img{
+    width: 70px;
+}
+.sidebar img:hover{
+    cursor: pointer;
 }
 
 .sidebar .container img {
-    width: 80px;
-    opacity: 50%;
-    transition: 0.3s;
-
+    width: 100px;
+    align-self: center;
 }
 
-.sidebar .container img:hover {
-    opacity: 100%;
-
+.sidebar .container .botaoSide {
+    width: 60%;
+    height: 4vh;
+    align-self: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+    font-family: 'yasashii';
+    font-size: 24px;
 }
+
+.sidebar .container {
+    justify-content: center;
+}
+
