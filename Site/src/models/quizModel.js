@@ -1,8 +1,8 @@
 var database = require("../database/config");
 
-function guardarResultado(id, fkquiz, fkusuario, acertos) {
-    let comandoSQL = `insert into quiz_usuario(id,fkquiz,fkusuario, acertos)
-values(${id},${fkquiz},${fkusuario}, ${acertos})`;
+function guardarResultado(fkquiz, fkusuario, acertos) {
+    let comandoSQL = `insert into quiz_usuario(fkquiz,fkusuario, acertos)
+values(${fkquiz},${fkusuario}, ${acertos})`;
     return database.executar(comandoSQL)
 }
 

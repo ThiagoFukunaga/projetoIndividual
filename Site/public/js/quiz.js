@@ -100,7 +100,8 @@ function mandarDados() {
         },
         body: JSON.stringify({
             acertos: ponto,
-            fkusuario: sessionStorage.getItem("ID_USUARIO")
+            fkusuario: sessionStorage.getItem("ID_USUARIO"),
+            fkquiz: 1
         })
     }).then(
         function (resultado) {

@@ -4,10 +4,10 @@ function guardarResultadoQuiz (req, res){
     var acertos = req.body.acertos
     var fkusuario = req.body.fkusuario
     var fkquiz = req.body.fkquiz
-    var id = req.body.id
+    
     console.log(req.body)
 
-    quizModel.guardarResultado(id,fkquiz, fkusuario, acertos).then(
+    quizModel.guardarResultado(fkquiz, fkusuario, acertos).then(
         function(resultado){
             res.json(resultado)
     }
