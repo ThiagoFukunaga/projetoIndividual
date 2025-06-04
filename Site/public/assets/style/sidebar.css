@@ -39,12 +39,12 @@
 
 }
 
-.sidebar #showSide{
+.sidebar #mostrarSide{
     width: 70px;
     position: absolute;
     z-index: 1000000;
 }
-.sidebar .container #closeSide{
+.sidebar .container #fecharSide{
     align-self: flex-end;
     position: absolute;
     top: 0;
@@ -52,7 +52,7 @@
     cursor: pointer;
 }
 
-.sidebar #showSide:hover{
+.sidebar #mostrarSide:hover{
     cursor: pointer;
 }
 

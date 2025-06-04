@@ -1,13 +1,13 @@
-function showContent() {
+function mostrarConteudo() {
 
-    if (document.getElementById("sidebarGrow").style.width != '100%') {
+    if (document.getElementById("crescerSide").style.width != '100%') {
 
-        document.getElementById("sidebarGrow").style.width = '100%'            
-        document.getElementById("showSide").src = ""
+        document.getElementById("crescerSide").style.width = '100%'            
+        document.getElementById("mostrarSide").src = ""
     } else {
 
-        document.getElementById("sidebarGrow").style.width = '0%'
-        document.getElementById("showSide").src = 'assets/imgs/menu.svg'
+        document.getElementById("crescerSide").style.width = '0%'
+        document.getElementById("mostrarSide").src = 'assets/imgs/menu.svg'
     }
 }
 
