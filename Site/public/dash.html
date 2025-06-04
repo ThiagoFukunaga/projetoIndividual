@@ -9,20 +9,58 @@
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="./assets/style/sidebar.css">
     <link rel="stylesheet" href="./assets/style/quiz.css">
+    <link rel="stylesheet" href="./assets/style/dashboard.css">
 
 </head>
 
-<body onload="obterDadosGrafico(); obterDadosEstacao(); obterDadosMedia()">
+<body onload="obterDadosGrafico(); obterDadosEstacao(); obterDadosMedia(); mudarTema()">
 
-    <canvas id="graficoQuiz"></canvas>
-    <br>
-    <canvas id="graficoEstacao"></canvas>
-    <br>
-    <canvas id="graficoQuizMedia"></canvas>
-    
+    <section class="sidebar">
+        <img src="assets/imgs/menu.svg" alt="" onclick="mostrarConteudo()" id="mostrarSide">
+        <div class="container" id="crescerSide">
+            <img src="assets/imgs/close.svg" alt="" id="fecharSide" onclick="mostrarConteudo()">
+            <img src="assets/imgs/iconSite.png" alt="">
+            <div class="link">
+                <button class="botaoSide" onclick="redirecionarQuiz()">Quiz</button>
+                <button class="botaoSide" onclick="redirecionarDash()">Dashboards</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="scrollBar">
+
+    <section class="acertosQuiz">
+        <div class="container">
+            <div class="texto">
+                Total de acertos:
+            </div>
+            <canvas id="graficoQuiz"></canvas>
+        </div>
+
+    </section>
+
+    <section class="comunidade">
+        <div class="container">
+            <div class="graficoEstacao">
+                <div class="texto">
+                    Preferência de estação dos usuários
+                </div>
+                <canvas id="graficoEstacao"></canvas>
+            </div>
+            <div class="graficoMedia">
+                <div class="texto">
+                    Média de acertos geral:
+                </div>
+                <canvas id="graficoQuizMedia"></canvas>
+            </div>
+        </div>
+    </section>
+</section>
+
 </body>
 
 </html>
+<script src="js/sidebar.js"></script>
 <script>
     function obterDadosGrafico() {
         let corDash = null
@@ -68,6 +106,7 @@
                                 labels: labels,
                                 datasets: [
                                     {
+                                        weight: 5,
                                         data: acertos,
                                         borderColor: corDash,
                                         backgroundColor: corDash,
@@ -236,7 +275,7 @@
                         console.log(json)
 
                         for (let i = 0; i < json.length; i++) {
-                            labels.push(`Tentativa: ${i + 1}`)
+                            labels.push(`Média: `)
                             media_acertos.push(json[i].media_acertos)
                         }
                         const graficoAcertoTotal = document.getElementById("graficoQuizMedia")
@@ -247,6 +286,7 @@
                                 labels: labels,
                                 datasets: [
                                     {
+                                        weight: 5,
                                         data: media_acertos,
                                         borderColor: corDash,
                                         backgroundColor: corDash,

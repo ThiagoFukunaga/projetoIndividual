@@ -9,10 +9,11 @@
     width: 14%;
     height: 100vh;
     box-sizing: border-box;
-    position: absolute;
     z-index: 1000;
     flex-direction: column;
     transition: 0.3s;
+    position: absolute;
+    top: 0;
 }
 
 .sidebar .container {
