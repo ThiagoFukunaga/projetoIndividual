@@ -30,6 +30,11 @@
     <section class="scrollBar">
 
     <section class="acertosQuiz">
+        <div class="kpi">
+            Bem vindo
+             <span id="nomeDoUsuario"></span>
+            Sua estação preferida é: <span id="estacaoDoUsuario"></span>
+        </div>
         <div class="container">
             <div class="texto">
                 Total de acertos:
@@ -328,6 +333,11 @@
             console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
         })
     }
+
+    function pegarDados(){
+        document.getElementById("nomeDoUsuario").innerText = sessionStorage.NOME_USUARIO
+        document.getElementById("estacaoDoUsuario").innerText = sessionStorage.ESTACAO_USUARIO
+    }pegarDados()
 
 
 </script>
