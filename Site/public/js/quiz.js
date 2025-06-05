@@ -163,18 +163,12 @@ function mudarTema() {
         root.style.setProperty('--corCorreto', '#8DCFEC');
         root.style.setProperty('--corProgress', '#B2CAFF');
         root.style.setProperty('--corTema', '#03045E');
-        root.style.setProperty('--corSide', '#b2caffba');
-        root.style.setProperty('--corSideSec', '#CCDBD9');
-        root.style.setProperty('--corPrincipal', '#B2CAFF');
 
     } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Outono") {
         root.style.setProperty('--imagemFundo', 'url("../imgs/outono4.jpg")')
         root.style.setProperty('--corCorreto', '#CCDBD9');
         root.style.setProperty('--corProgress', '#889E9D');
         root.style.setProperty('--corTema', '#AAB5B8');
-        root.style.setProperty('--corSide', '#aab5b86d');
-        root.style.setProperty('--corSideSec', '#CCDBD9');
-        root.style.setProperty('--corPrincipal', '#AAB5B8');
 
 
     } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Primavera") {
@@ -182,17 +176,11 @@ function mudarTema() {
         root.style.setProperty('--corCorreto', '#C3B1E6');
         root.style.setProperty('--corProgress', '#8F6CF0');
         root.style.setProperty('--corTema', '#341E60');
-        root.style.setProperty('--corSide', '#c3b1e674');
-        root.style.setProperty('--corSideSec', '#8F6CF0');
-        root.style.setProperty('--corPrincipal', '#C3B1E6');
 
     } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Verão") {
         root.style.setProperty('--imagemFundo', 'url("../imgs/verao3.jpg")')
         root.style.setProperty('--corCorreto', '#AED581');
         root.style.setProperty('--corProgress', '#7CB342');
         root.style.setProperty('--corTema', '#33691E');
-        root.style.setProperty('--corSide', '#7cb3426f');
-        root.style.setProperty('--corSideSec', '#33691E');
-        root.style.setProperty('--corPrincipal', '#7CB342');
     }
 }
