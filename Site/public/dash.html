@@ -30,14 +30,18 @@
     <section class="scrollBar">
 
     <section class="acertosQuiz">
+
+        <div class="organizarKPI">
         <div class="kpi">
-            Bem vindo
-             <span id="nomeDoUsuario"></span>
             Sua estação preferida é: <span id="estacaoDoUsuario"></span>
+        </div> 
+         <div class="kpi">
+            Sua média de acertos é: <span id="estacaoDoUsuario"></span>
         </div>
+    </div>
         <div class="container">
             <div class="texto">
-                Total de acertos:
+                <span class="imgSpan"><img src="assets/imgs/info.svg" alt=""></span>Total de acertos:
             </div>
             <canvas id="graficoQuiz"></canvas>
         </div>
@@ -48,13 +52,13 @@
         <div class="container">
             <div class="graficoEstacao">
                 <div class="texto">
-                    Preferência de estação dos usuários
+                    <span class="imgSpan"><img src="assets/imgs/info.svg" alt=""></span>Preferência de estação dos usuários
                 </div>
                 <canvas id="graficoEstacao"></canvas>
             </div>
             <div class="graficoMedia">
                 <div class="texto">
-                    Média de acertos geral:
+                    <span class="imgSpan"><img src="assets/imgs/info.svg" alt=""></span> Média de acertos geral:
                 </div>
                 <canvas id="graficoQuizMedia"></canvas>
             </div>
@@ -208,8 +212,8 @@
                                     backgroundColor: [
                                         '#B3EBF2', // inverno
                                         '#B39EB5', //primavera
-                                        '#CFCFC4    ', // outono
-                                        '#80EF80' // verao
+                                        '#80EF80', // verao
+                                        '#CFCFC4' // outono
                                     ],
                                     fill: true,
                                     color: '#fff',
@@ -335,7 +339,6 @@
     }
 
     function pegarDados(){
-        document.getElementById("nomeDoUsuario").innerText = sessionStorage.NOME_USUARIO
         document.getElementById("estacaoDoUsuario").innerText = sessionStorage.ESTACAO_USUARIO
     }pegarDados()
 
@@ -344,16 +347,20 @@
 
     if (sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno") {
         root.style.setProperty('--corTextokpi', '#9FB7E3');
+        root.style.setProperty('--corBG', '#ADC6E5');
 
     } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Outono") {
         root.style.setProperty('--corTextokpi', '#8A8C8D');
+        root.style.setProperty('--corBG', '#7c7a8d');
 
 
     } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Primavera") {
-        root.style.setProperty('--corTextokpi', '#9971BO');
+        root.style.setProperty('--corTextokpi', '#5D2896');
+        root.style.setProperty('--corBG', '#9295D0');
 
     } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Verão") {        
         root.style.setProperty('--corTextokpi', '#186446');
+        root.style.setProperty('--corBG', '#9DC183');
     }
     }
 </script>
