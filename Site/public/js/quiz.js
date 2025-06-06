@@ -157,7 +157,6 @@ obterQuiz()
 function mudarTema() {
     const root = document.documentElement;
 
-
     if (sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno") {
         root.style.setProperty('--imagemFundo', 'url("../imgs/inverno3.jpg")');
         root.style.setProperty('--corCorreto', '#8DCFEC');
