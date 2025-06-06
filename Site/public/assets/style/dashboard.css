@@ -1,95 +1,49 @@
-:root {
-    --corTextokpi: #000
-}
-
-#estacaoDoUsuario {
-    color: var(--corTextokpi);
-}
-
-.acertosQuiz {
+.acertosQuiz{
     display: flex;
     width: 100%;
     height: 60vh;
     background-color: lavender;
     justify-content: space-evenly;
-    padding: 14px 0px 14px 0px;
 }
 
-.acertosQuiz .container {
+.acertosQuiz .container{
     width: 50%;
 }
 
-.acertosQuiz .kpi {
+.acertosQuiz  .kpi{
+    border: 2px red solid;
     border-radius: 8px;
-    width: 30%;
-    height: 30%;
+    width: 35%;
+    height: 60%;
     align-self: center;
-    justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px #191b37;
-    color: #191b37;
-    font-size: 36px;
     font-family: 'yasashii';
+    font-size: 40px;
+    flex-direction: column;
 }
 
-
-
-.acertosQuiz .container .texto {
+.acertosQuiz .container .texto{
     display: flex;
     font-family: 'yasashii';
     font-size: 40px;
     justify-content: center;
 }
 
-.acertosQuiz .container .texto .imgSpan{
-    width: 40px;
-    height: 40px;
-}
-
-.acertosQuiz .container .texto .imgSpan img{
-    width: 30px;
-    height: 30px;
-    
-}
-
-.acertosQuiz .container .texto .imgSpan img:hover{
-    cursor: pointer;
-}
-
-.comunidade .container .texto .imgSpan{
-    width: 40px;
-    height: 40px;
-}
-
-.comunidade .container .texto .imgSpan img{
-    width: 30px;
-    height: 30px;
-    
-}
-
-.comunidade .container .texto .imgSpan img:hover{
-    cursor: pointer;
-}
-
-.comunidade {
+.comunidade{
     display: flex;
     width: 100%;
     height: 60vh;
-    background-color: lavender;
-    padding: 14px 0px 14px 0px;
     justify-content: flex-start;
 }
 
-.comunidade .container {
+.comunidade .container{
     width: 100%;
     justify-content: space-evenly;
-    flex-direction: row;
+    flex-direction: row ;
 }
 
-.comunidade .texto {
+.comunidade  .texto{
     display: flex;
     font-family: 'yasashii';
     font-size: 36px;
@@ -98,23 +52,22 @@
     text-align: center;
 }
 
-.comunidade .container .graficoMedia {
+.comunidade .container .graficoMedia{
     display: flex;
     flex-direction: column;
     min-width: 800px;
     max-width: 800px;
 }
 
-.comunidade .container .graficoEstacao {
+.comunidade .container .graficoEstacao{
     display: flex;
     flex-direction: column;
     min-width: 400px;
     max-width: 400px;
 }
 
-.scrollBar {
+.scrollBar{
     width: 100%;
     height: 100vh;
     overflow-y: auto;
-    
 }
