@@ -13,7 +13,7 @@
 
 </head>
 
-<body onload="obterDadosGrafico(); obterDadosEstacao(); obterDadosMedia(); mudarTema()">
+<body onload="obterDadosGrafico(); obterDadosEstacao(); obterDadosMedia(); mudarTemaSide(); mudarCorTexto()">
 
     <section class="sidebar">
         <img src="assets/imgs/menu.svg" alt="" onclick="mostrarConteudo()" id="mostrarSide">
@@ -21,7 +21,7 @@
             <img src="assets/imgs/close.svg" alt="" id="fecharSide" onclick="mostrarConteudo()">
             <img src="assets/imgs/iconSite.png" alt="">
             <div class="link">
-                <button class="botaoSide" onclick="redirecionarQuiz()">Quiz</button>
+                    <button class="botaoSide" onclick="redirecionarQuiz()">Quiz</button>
                 <button class="botaoSide" onclick="redirecionarDash()">Dashboards</button>
             </div>
         </div>
@@ -30,14 +30,13 @@
     <section class="scrollBar">
 
     <section class="acertosQuiz">
+            
         <div class="kpi">
-            Bem vindo
-             <span id="nomeDoUsuario"></span>
-            Sua estação preferida é: <span id="estacaoDoUsuario"></span>
+    Sua estação preferida é: <span id="estacaoDoUsuario"></span>
         </div>
         <div class="container">
             <div class="texto">
-                Total de acertos:
+                <span class="imgSpan"><img src="assets/imgs/info.svg" alt=""></span> Total de acertos:
             </div>
             <canvas id="graficoQuiz"></canvas>
         </div>
@@ -48,13 +47,13 @@
         <div class="container">
             <div class="graficoEstacao">
                 <div class="texto">
-                    Preferência de estação dos usuários
+                    <span class="imgSpan"><img src="assets/imgs/info.svg" alt=""></span>Preferência de estação dos usuários
                 </div>
                 <canvas id="graficoEstacao"></canvas>
             </div>
             <div class="graficoMedia">
                 <div class="texto">
-                    Média de acertos geral:
+                    <span class="imgSpan"><img src="assets/imgs/info.svg" alt=""></span>Média de acertos geral:
                 </div>
                 <canvas id="graficoQuizMedia"></canvas>
             </div>
@@ -335,9 +334,24 @@
     }
 
     function pegarDados(){
-        document.getElementById("nomeDoUsuario").innerText = sessionStorage.NOME_USUARIO
         document.getElementById("estacaoDoUsuario").innerText = sessionStorage.ESTACAO_USUARIO
     }pegarDados()
 
+    function mudarCorTexto(){
+        const root = document.documentElement;
 
+    if (sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno") {
+        root.style.setProperty('--corTextokpi', '#9FB7E3');
+
+    } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Outono") {
+        root.style.setProperty('--corTextokpi', '#8A8C8D');
+
+
+    } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Primavera") {
+        root.style.setProperty('--corTextokpi', '#9971BO');
+
+    } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Verão") {        
+        root.style.setProperty('--corTextokpi', '#186446');
+    }
+    }
 </script>

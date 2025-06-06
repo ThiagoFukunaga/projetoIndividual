@@ -21,7 +21,7 @@ function redirecionarInicio(){
     window.location = "./logado.html"
 }
 
-function mudarTema() {
+function mudarTemaSide() {
     const root = document.documentElement;
 
     if (sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno") {
@@ -48,3 +48,4 @@ function mudarTema() {
     }
 
 }
+
