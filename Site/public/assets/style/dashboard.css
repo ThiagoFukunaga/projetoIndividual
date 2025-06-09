@@ -158,8 +158,9 @@
   }
 
   .conteudoModal button{
-    width: 10%;
-    padding: 4px;
+    width: 12%;
+    padding: 6px;
+    height: 20%;
     align-self: center;
     margin-top: 20px;
     border-radius: 4px;
@@ -177,12 +178,35 @@
 
   #modalAcertos{
     display: none;
+    font-size: 20px;
+    flex-direction: column;
+
   }
+
+  .conteudoModal img{
+    width: 30px;
+    height: 30px;
+  }
+
+  .conteudoModal h1{
+    font-family: "DM sans";
+  }
+
 
   #modalMedia{
     display: none;
+    font-size: 20px;
+    flex-direction: column;
   }
 
   #modalEstacao{
     display: none;
+    font-size: 20px;
+    flex-direction: column;
+  }
+
+  .titulo{
+    font-size: 46px;
+    font-family: "yasashii";
+    align-self: center;
   }

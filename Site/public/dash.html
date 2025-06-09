@@ -32,8 +32,9 @@
     <section class="scrollBar">
 
     <section class="acertosQuiz">
-
-        <div class="organizarKPI">
+        
+        <div class="organizarKPI"> 
+            <div class="titulo">Bem-vindo <span id="nomeUsuario"></span>!</div>
         <div class="kpi">
             Sua estação preferida é: <span id="estacaoDoUsuario"></span>
         </div> 
@@ -70,9 +71,15 @@
 
 <div class="modals" id="modal">
     <div class="conteudoModal" >
-        <span id="modalAcertos">Este gráfico de barras representa o número de questões acertadas no quiz de La la land, mostrando os acertos de cada tentativa, em ordem.</span> 
-        <span id="modalMedia">Este gráfico de barras representa a média geral de questões acertadas no quiz de La la land, mostrando a média de acertos contando todos os usuários que fizeram o quiz.</span> 
-        <span id="modalEstacao">Este gráfico de donuts representa a preferência da estação do ano dos usuários, mostrando o número total de pessoas que preferem o inverno, primavera, verão ou outono.</span> 
+        <span id="modalAcertos">
+            <h1> <img src="assets/imgs/infoPreto.svg" alt="">Total de acertos:</h1>
+            Este gráfico de barras representa o número de questões acertadas no quiz de La la land, mostrando os acertos de cada tentativa, em ordem.</span> 
+        <span id="modalMedia">
+            <h1> <img src="assets/imgs/infoPreto.svg" alt="">Média de acertos:</h1>
+            Este gráfico de barras representa a média geral de questões acertadas no quiz de La la land, mostrando a média de acertos contando todos os usuários que fizeram o quiz.</span> 
+        <span id="modalEstacao">
+            <h1> <img src="assets/imgs/infoPreto.svg" alt="">Preferência de estação:</h1>
+            Este gráfico de donuts representa a preferência da estação do ano dos usuários, mostrando o número total de pessoas que preferem o inverno, primavera, verão ou outono.</span> 
         <button onclick="fecharModal()">Entendi</button>
     </div>
 </section>
@@ -94,10 +101,12 @@
             })
             }).then(
             function(resultado){
-                console.log(resultado)
-            }
-            )
-        }buscarMediaAcertos()
+            resultado.json().then(function(json){
+                console.log(json)
+                document.getElementById("mediaUsuario").innerText = json[0].media_usuario
+            })  
+                    })
+            }buscarMediaAcertos()
     
 
     function obterDadosGrafico() {
@@ -369,6 +378,7 @@
 
     function pegarDados(){
         document.getElementById("estacaoDoUsuario").innerText = sessionStorage.ESTACAO_USUARIO
+        document.getElementById("nomeUsuario").innerText = sessionStorage.NOME_USUARIO
     }pegarDados()
 
     function mudarCorTexto(){
