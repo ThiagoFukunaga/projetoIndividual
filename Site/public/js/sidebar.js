@@ -12,13 +12,13 @@ function mostrarConteudo() {
 }
 
 function redirecionarQuiz(){
-    window.location = "./musicas.html"
+    window.location = "./quiz.html"
 }
 function redirecionarDash(){
     window.location = "./dash.html"
 }
 function redirecionarInicio(){
-    window.location = "./logado.html"
+    window.location = "./index.html"
 }
 
 function mudarTemaSide() {

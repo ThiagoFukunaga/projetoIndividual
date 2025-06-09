@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboards</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="./assets/style/sidebar.css">
     <link rel="stylesheet" href="./assets/style/quiz.css">
     <link rel="stylesheet" href="./assets/style/dashboard.css">
+    <link rel="icon" href="./assets/imgs/iconSite.png">
 
 </head>
 
@@ -21,6 +22,7 @@
             <img src="assets/imgs/close.svg" alt="" id="fecharSide" onclick="mostrarConteudo()">
             <img src="assets/imgs/iconSite.png" alt="">
             <div class="link">
+                <button class="botaoSide" onclick="redirecionarInicio()">Início</button>
                 <button class="botaoSide" onclick="redirecionarQuiz()">Quiz</button>
                 <button class="botaoSide" onclick="redirecionarDash()">Dashboards</button>
             </div>
@@ -41,7 +43,7 @@
     </div>
         <div class="container">
             <div class="texto">
-                <span class="imgSpan"><img src="assets/imgs/info.svg" alt=""></span>Total de acertos:
+                <span class="imgSpan" onclick="mostrarModalAcertos()"><img src="assets/imgs/info.svg" alt="" ></span>Total de acertos:
             </div>
             <canvas id="graficoQuiz"></canvas>
         </div>
@@ -52,13 +54,13 @@
         <div class="container">
             <div class="graficoEstacao">
                 <div class="texto">
-                    <span class="imgSpan"><img src="assets/imgs/info.svg" alt=""></span>Preferência de estação dos usuários
+                    Preferência de estação dos usuários:<span class="imgSpan"><img src="assets/imgs/info.svg" alt="" onclick="mostrarModalEstacao()"></span>
                 </div>
                 <canvas id="graficoEstacao"></canvas>
             </div>
             <div class="graficoMedia">
                 <div class="texto">
-                    <span class="imgSpan"><img src="assets/imgs/info.svg" alt=""></span> Média de acertos geral:
+                    <span class="imgSpan"><img src="assets/imgs/info.svg" alt="" onclick="mostrarModalMedia()"></span> Média de acertos geral:
                 </div>
                 <canvas id="graficoQuizMedia"></canvas>
             </div>
@@ -66,10 +68,20 @@
     </section>
 </section>
 
+<div class="modals" id="modal">
+    <div class="conteudoModal" >
+        <span id="modalAcertos">Este gráfico de barras representa o número de questões acertadas no quiz de La la land, mostrando os acertos de cada tentativa, em ordem.</span> 
+        <span id="modalMedia">Este gráfico de barras representa a média geral de questões acertadas no quiz de La la land, mostrando a média de acertos contando todos os usuários que fizeram o quiz.</span> 
+        <span id="modalEstacao">Este gráfico de donuts representa a preferência da estação do ano dos usuários, mostrando o número total de pessoas que preferem o inverno, primavera, verão ou outono.</span> 
+        <button onclick="fecharModal()">Entendi</button>
+    </div>
+</section>
+
 </body>
 
 </html>
 <script src="js/sidebar.js"></script>
+<script src="js/modal.js"></script>
 <script>
     function obterDadosGrafico() {
         let corDash = null
@@ -347,7 +359,7 @@
 
     if (sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno") {
         root.style.setProperty('--corTextokpi', '#9FB7E3');
-        root.style.setProperty('--corBG', '#ADC6E5');
+        root.style.setProperty('--corBG', '#6495ed');
 
     } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Outono") {
         root.style.setProperty('--corTextokpi', '#8A8C8D');
