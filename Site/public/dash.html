@@ -43,10 +43,13 @@
         </div>
     </div>
         <div class="container">
-            <div class="texto">
-                <span class="imgSpan" onclick="mostrarModalAcertos()"><img src="assets/imgs/info.svg" alt="" ></span>Total de acertos:
+            
+            <div class="graficoQuiz">
+                <div class="texto">
+                    <span class="imgSpan" onclick="mostrarModalAcertos()"><img src="assets/imgs/info.svg" alt="" ></span>Total de acertos:
+                </div>
+                <canvas id="graficoQuiz"></canvas>
             </div>
-            <canvas id="graficoQuiz"></canvas>
         </div>
 
     </section>
@@ -387,19 +390,24 @@
     if (sessionStorage.getItem("ESTACAO_USUARIO") == "Inverno") {
         root.style.setProperty('--corTextokpi', '#9FB7E3');
         root.style.setProperty('--corBG', '#6495ed');
+        root.style.setProperty('--corShadow', '#111184');
 
     } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Outono") {
         root.style.setProperty('--corTextokpi', '#8A8C8D');
         root.style.setProperty('--corBG', '#7c7a8d');
+        root.style.setProperty('--corShadow', '#A1A1A1');
 
 
     } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Primavera") {
         root.style.setProperty('--corTextokpi', '#5D2896');
         root.style.setProperty('--corBG', '#9295D0');
+        root.style.setProperty('--corShadow', '#560591');
 
     } else if (sessionStorage.getItem("ESTACAO_USUARIO") == "Verão") {        
         root.style.setProperty('--corTextokpi', '#186446');
         root.style.setProperty('--corBG', '#9DC183');
+        root.style.setProperty('--corShadow', '#2C5F34');
+
     }
     }
 </script>
