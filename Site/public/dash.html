@@ -38,7 +38,7 @@
             Sua estação preferida é: <span id="estacaoDoUsuario"></span>
         </div> 
          <div class="kpi">
-            Sua média de acertos é: <span id="estacaoDoUsuario"></span>
+            Sua média de acertos é: <span id="mediaUsuario"></span>
         </div>
     </div>
         <div class="container">
@@ -83,6 +83,23 @@
 <script src="js/sidebar.js"></script>
 <script src="js/modal.js"></script>
 <script>
+    function buscarMediaAcertos(){
+        fetch(`/dashboard/buscarAcertosMedia/`, {
+            method:"POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fkusuario: sessionStorage.getItem("ID_USUARIO")
+            })
+            }).then(
+            function(resultado){
+                console.log(resultado)
+            }
+            )
+        }buscarMediaAcertos()
+    
+
     function obterDadosGrafico() {
         let corDash = null
 
