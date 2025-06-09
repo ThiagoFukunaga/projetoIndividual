@@ -47,4 +47,4 @@ function mudarTemaSide() {
         root.style.setProperty('--corPrincipal', '#7CB342');
     }
 
-}
+}mudarTemaSide()
